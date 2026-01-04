@@ -44,21 +44,16 @@ namespace GMS
                 }
                 if (!int.TryParse(TxtId.Text.Trim(), out int userId))
                 {
-                    MessageBox.Show("User Id must be numeric");
+                    MessageBox.Show("incorrect id or password");
                     return;
                 }
 
                 string password = txtPass.Text.Trim();
+                password = password.Replace("'", "''");
 
-                string query = $@"SELECT u.UserId, u.UserName, u.UserEmail, u.UserPassword, u.RId, r.UserType FROM UserInformation u INNER JOIN RoleTable r ON u.RId = r.RoleId WHERE u.UserId = @userId AND u.UserPassword = @password ";
-                var param = new Dictionary<string, object>();
+                string query = $@"SELECT u.UserId, u.UserName, u.UserEmail, u.UserPassword, u.RId, r.UserType FROM UserInformation u INNER JOIN RoleTable r ON u.RId = r.RoleId WHERE u.UserId = {userId} AND u.UserPassword = '{password}' ";
+                var result = DbHelper.GetQueryData(query);
 
-
-
-                param.Add("@userId", userId);
-                param.Add("@password", password);
-
-                var result = DbHelper.GetQueryData(query, param);
                 if (result.HasError)
                 {
                     MessageBox.Show(result.Message);
@@ -67,7 +62,7 @@ namespace GMS
 
                 if (result.Data.Rows.Count != 1)
                 {
-                    MessageBox.Show("Incorrect Id or Password");
+                    MessageBox.Show("Incorrect password");
                     return;
                 }
 
