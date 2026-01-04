@@ -10,24 +10,86 @@ using System.Windows.Forms;
 
 namespace GMS
 {
-    public partial class Login : Form
+    public partial class Form1 : Form
     {
-        public Login()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        public static int LoggedUserId { get; set; }
+
+        public static string LoggedUserRole { get; set; }
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrEmpty(TxtId.Text))
+                {
+                    MessageBox.Show("Enter Id");
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtPass.Text))
+                {
+                    MessageBox.Show("Enter Password");
+                    return;
+                }
+                if (!int.TryParse(TxtId.Text.Trim(), out int userId))
+                {
+                    MessageBox.Show("User Id must be numeric");
+                    return;
+                }
+
+                string password = txtPass.Text.Trim();
+
+                string query = $@"SELECT u.UserId, u.UserName, u.UserEmail, u.UserPassword, u.RId, r.UserType FROM UserInformation u INNER JOIN RoleTable r ON u.RId = r.RoleId WHERE u.UserId = @userId AND u.UserPassword = @password ";
+                var param = new Dictionary<string, object>();
+
+
+
+                param.Add("@userId", userId);
+                param.Add("@password", password);
+
+                var result = DbHelper.GetQueryData(query, param);
+                if (result.HasError)
+                {
+                    MessageBox.Show(result.Message);
+                    return;
+                }
+
+                if (result.Data.Rows.Count != 1)
+                {
+                    MessageBox.Show("Incorrect Id or Password");
+                    return;
+                }
+
+                LoggedUserId = Convert.ToInt32(result.Data.Rows[0]["UserId"]);
+                LoggedUserRole = result.Data.Rows[0]["UserType"].ToString();
+
+                string userType = LoggedUserRole.ToLower();
+                if (userType == "admin")
+                {
+                    Admin admin = new Admin();
+                    admin.Show(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void TxtId_TextChanged(object sender, EventArgs e)
         {
 
         }
