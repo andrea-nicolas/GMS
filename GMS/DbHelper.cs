@@ -16,9 +16,9 @@ namespace GMS
 
         public string Message { get; set; }
     }
-    internal class DbHelper
+    public class DbHelper
     {
-        public static SqlConnection con = new SqlConnection("Data Source=LAPTOP-6MDDIQD9\\SQLEXPRESS;Initial Catalog=tanzila;Integrated Security=True;TrustServerCertificate=True");
+        public static SqlConnection con = new SqlConnection("Data Source=ANDREA-PC\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
 
         public static Result GetQueryData(string query)
         {
@@ -62,4 +62,3 @@ namespace GMS
         }
     }
 }
-    
