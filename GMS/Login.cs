@@ -37,14 +37,19 @@ namespace GMS
             }
             else
             {
-                string query = "SELECT * FROM usersdb WHERE username = '" + TBUsername.Text + "' AND password = '" + TBPassword.Text + "'";
-                string role = SQL.checkCredentials(query);
+                string role = SQL.checkCredentials("SELECT * FROM usersdb WHERE username = '" + TBUsername.Text + "' AND password = '" + TBPassword.Text + "'");
                 SQL.disconnect();
-                if (role == "salesperson");
+                MessageBox.Show("Login Successful");
+                if (role == "salesperson")
                 {
                     SPDashboard sPDashboard = new SPDashboard();
                     sPDashboard.Show();
                     this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Credentials");
+                    return;
                 }
             }
                 
