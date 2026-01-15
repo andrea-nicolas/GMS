@@ -74,13 +74,11 @@ namespace GMS
                 }
                 else
                 {
-                    MessageBox.Show("Login Successful");
                     return reader["role"].ToString();
                 }
             }
             else
             {
-                MessageBox.Show("Invalid Credentials");
                 return "invalid";
             }
         }

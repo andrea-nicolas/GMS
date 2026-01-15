@@ -41,6 +41,13 @@ namespace GMS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (SQL.checkCredentials("SELECT * FROM usersdb WHERE username = '" + TBUsername.Text + "'") != "invalid")
+            {
+                SQL.disconnect();
+                MessageBox.Show("Username already exists!");
+                return;
+            }
+
             if (TBConfirmPassword.Text != TBPassword.Text)
             {
                 MessageBox.Show("Passwords do not match!");
