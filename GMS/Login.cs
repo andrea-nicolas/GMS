@@ -30,25 +30,43 @@ namespace GMS
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            try
+            if (TBPassword.Text == "" || TBUsername.Text == "")
             {
-                if (string.IsNullOrEmpty(TxtId.Text))
+                MessageBox.Show("Please enter username and password");
+                return;
+            }
+            else
+            {
+                string query = "SELECT * FROM usersdb WHERE username = '" + TBUsername.Text + "' AND password = '" + TBPassword.Text + "'";
+                string role = SQL.checkCredentials(query);
+                SQL.disconnect();
+                if (role == "salesperson");
+                {
+                    SPDashboard sPDashboard = new SPDashboard();
+                    sPDashboard.Show();
+                    this.Hide();
+                }
+            }
+                
+            /*try
+            {
+                if (string.IsNullOrEmpty(TBUsername.Text))
                 {
                     MessageBox.Show("Enter Id");
                     return;
                 }
-                if (string.IsNullOrEmpty(txtPass.Text))
+                if (string.IsNullOrEmpty(TBPassword.Text))
                 {
                     MessageBox.Show("Enter Password");
                     return;
                 }
-                if (!int.TryParse(TxtId.Text.Trim(), out int userId))
+                if (!int.TryParse(TBUsername.Text.Trim(), out int userId))
                 {
                     MessageBox.Show("incorrect id or password");
                     return;
                 }
 
-                string password = txtPass.Text.Trim();
+                string password = TBPassword.Text.Trim();
                 password = password.Replace("'", "''");
 
                 string query = $@"SELECT u.UserId, u.UserName, u.UserEmail, u.UserPassword, u.RId, r.UserType FROM UserInformation u INNER JOIN RoleTable r ON u.RId = r.RoleId WHERE u.UserId = {userId} AND u.UserPassword = '{password}' ";
@@ -80,13 +98,27 @@ namespace GMS
             {
                 MessageBox.Show(ex.Message);
                 return;
-            }
+            }*/
 
         }
 
         private void TxtId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTRegister_Click(object sender, EventArgs e)
+        {
+            Register registerpg = new Register();
+            registerpg.Show();
+            this.Hide();
+        }
+
+        private void BTForgotPass_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotpasspg = new ForgotPassword();
+            forgotpasspg.Show();    
+            this.Hide();
         }
     }
 }

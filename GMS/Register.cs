@@ -70,7 +70,7 @@ namespace GMS
             }
             else
             {
-                SQL.execute("INSERT INTO usersdb (email, gender, phoneNo, password, username, role, securityAnswer, accountStatus) VALUES ('" + TBEmail.Text + "', '" + gender + "', '" + TBPhoneNo.Text + "', '" + TBPassword.Text + "', '" + TBUsername.Text + "','" + CBRole.Text + "','" + TBSecAns + "','unapproved')");
+                SQL.execute("INSERT INTO usersdb (email, gender, phoneNo, password, username, role, securityAnswer, accountStatus) VALUES ('" + TBEmail.Text + "', '" + gender + "', '" + TBPhoneNo.Text + "', '" + TBPassword.Text + "', '" + TBUsername.Text + "','" + CBRole.Text + "','" + TBSecAns + "','innactive')");
                 MessageBox.Show("Registration Successful!");
             }
         }

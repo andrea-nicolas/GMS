@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -55,6 +56,32 @@ namespace GMS
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        public static string checkCredentials (string query)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                if (reader["accountStatus"].ToString() == "innactive")
+                {
+                    MessageBox.Show("Account status is innactive. Please contact Admin.");
+                    return "invalid";
+                }
+                else
+                {
+                    MessageBox.Show("Login Successful");
+                    return reader["role"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Credentials");
+                return "invalid";
             }
         }
 
