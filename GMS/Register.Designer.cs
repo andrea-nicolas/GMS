@@ -38,24 +38,25 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BTRegister = new System.Windows.Forms.Button();
+            this.BTReturn = new System.Windows.Forms.Button();
+            this.TBUsername = new System.Windows.Forms.TextBox();
+            this.TBEmail = new System.Windows.Forms.TextBox();
+            this.TBPassword = new System.Windows.Forms.TextBox();
+            this.TBConfirmPassword = new System.Windows.Forms.TextBox();
+            this.TBPhoneNo = new System.Windows.Forms.TextBox();
+            this.TBSecAns = new System.Windows.Forms.TextBox();
+            this.TBConfirmSecAns = new System.Windows.Forms.TextBox();
+            this.RBFemale = new System.Windows.Forms.RadioButton();
+            this.RBMale = new System.Windows.Forms.RadioButton();
+            this.CBRole = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(350, 38);
+            this.label1.Location = new System.Drawing.Point(358, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -129,7 +130,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(410, 195);
+            this.label9.Location = new System.Drawing.Point(410, 226);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 9;
@@ -138,126 +139,142 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(372, 222);
+            this.label11.Location = new System.Drawing.Point(372, 253);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(124, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "Confirm Security Answer:";
             // 
-            // button1
+            // BTRegister
             // 
-            this.button1.Location = new System.Drawing.Point(401, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTRegister.Location = new System.Drawing.Point(401, 355);
+            this.BTRegister.Name = "BTRegister";
+            this.BTRegister.Size = new System.Drawing.Size(112, 23);
+            this.BTRegister.TabIndex = 12;
+            this.BTRegister.Text = "Register";
+            this.BTRegister.UseVisualStyleBackColor = true;
+            this.BTRegister.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BTReturn
             // 
-            this.button2.Location = new System.Drawing.Point(283, 355);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Return to Login";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTReturn.Location = new System.Drawing.Point(283, 355);
+            this.BTReturn.Name = "BTReturn";
+            this.BTReturn.Size = new System.Drawing.Size(112, 23);
+            this.BTReturn.TabIndex = 13;
+            this.BTReturn.Text = "Return to Login";
+            this.BTReturn.UseVisualStyleBackColor = true;
+            this.BTReturn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // TBUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(470, 20);
-            this.textBox1.TabIndex = 14;
+            this.TBUsername.Location = new System.Drawing.Point(118, 109);
+            this.TBUsername.Name = "TBUsername";
+            this.TBUsername.Size = new System.Drawing.Size(470, 20);
+            this.TBUsername.TabIndex = 14;
             // 
-            // textBox2
+            // TBEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 135);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(470, 20);
-            this.textBox2.TabIndex = 15;
+            this.TBEmail.Location = new System.Drawing.Point(118, 135);
+            this.TBEmail.Name = "TBEmail";
+            this.TBEmail.Size = new System.Drawing.Size(470, 20);
+            this.TBEmail.TabIndex = 15;
             // 
-            // textBox3
+            // TBPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 188);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 20);
-            this.textBox3.TabIndex = 16;
+            this.TBPassword.Location = new System.Drawing.Point(118, 188);
+            this.TBPassword.Name = "TBPassword";
+            this.TBPassword.Size = new System.Drawing.Size(236, 20);
+            this.TBPassword.TabIndex = 16;
             // 
-            // textBox4
+            // TBConfirmPassword
             // 
-            this.textBox4.Location = new System.Drawing.Point(118, 214);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(236, 20);
-            this.textBox4.TabIndex = 17;
+            this.TBConfirmPassword.Location = new System.Drawing.Point(118, 214);
+            this.TBConfirmPassword.Name = "TBConfirmPassword";
+            this.TBConfirmPassword.Size = new System.Drawing.Size(236, 20);
+            this.TBConfirmPassword.TabIndex = 17;
             // 
-            // textBox5
+            // TBPhoneNo
             // 
-            this.textBox5.Location = new System.Drawing.Point(502, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(236, 20);
-            this.textBox5.TabIndex = 18;
+            this.TBPhoneNo.Location = new System.Drawing.Point(502, 161);
+            this.TBPhoneNo.Name = "TBPhoneNo";
+            this.TBPhoneNo.Size = new System.Drawing.Size(236, 20);
+            this.TBPhoneNo.TabIndex = 18;
             // 
-            // textBox6
+            // TBSecAns
             // 
-            this.textBox6.Location = new System.Drawing.Point(502, 192);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(236, 20);
-            this.textBox6.TabIndex = 19;
+            this.TBSecAns.Location = new System.Drawing.Point(502, 223);
+            this.TBSecAns.Name = "TBSecAns";
+            this.TBSecAns.Size = new System.Drawing.Size(236, 20);
+            this.TBSecAns.TabIndex = 19;
             // 
-            // textBox7
+            // TBConfirmSecAns
             // 
-            this.textBox7.Location = new System.Drawing.Point(502, 219);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(236, 20);
-            this.textBox7.TabIndex = 20;
+            this.TBConfirmSecAns.Location = new System.Drawing.Point(502, 250);
+            this.TBConfirmSecAns.Name = "TBConfirmSecAns";
+            this.TBConfirmSecAns.Size = new System.Drawing.Size(236, 20);
+            this.TBConfirmSecAns.TabIndex = 20;
             // 
-            // radioButton1
+            // RBFemale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(133, 166);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 17);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Female";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RBFemale.AutoSize = true;
+            this.RBFemale.Location = new System.Drawing.Point(133, 166);
+            this.RBFemale.Name = "RBFemale";
+            this.RBFemale.Size = new System.Drawing.Size(59, 17);
+            this.RBFemale.TabIndex = 21;
+            this.RBFemale.TabStop = true;
+            this.RBFemale.Text = "Female";
+            this.RBFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RBMale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(218, 166);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
-            this.radioButton2.TabIndex = 22;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Male";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RBMale.AutoSize = true;
+            this.RBMale.Location = new System.Drawing.Point(218, 166);
+            this.RBMale.Name = "RBMale";
+            this.RBMale.Size = new System.Drawing.Size(48, 17);
+            this.RBMale.TabIndex = 22;
+            this.RBMale.TabStop = true;
+            this.RBMale.Text = "Male";
+            this.RBMale.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // CBRole
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 249);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 21);
-            this.comboBox1.TabIndex = 23;
+            this.CBRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBRole.FormattingEnabled = true;
+            this.CBRole.Items.AddRange(new object[] {
+            "manager",
+            "salesperson"});
+            this.CBRole.Location = new System.Drawing.Point(118, 249);
+            this.CBRole.Name = "CBRole";
+            this.CBRole.Size = new System.Drawing.Size(236, 21);
+            this.CBRole.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(503, 205);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(121, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "What was your first pet?";
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.CBRole);
+            this.Controls.Add(this.RBMale);
+            this.Controls.Add(this.RBFemale);
+            this.Controls.Add(this.TBConfirmSecAns);
+            this.Controls.Add(this.TBSecAns);
+            this.Controls.Add(this.TBPhoneNo);
+            this.Controls.Add(this.TBConfirmPassword);
+            this.Controls.Add(this.TBPassword);
+            this.Controls.Add(this.TBEmail);
+            this.Controls.Add(this.TBUsername);
+            this.Controls.Add(this.BTReturn);
+            this.Controls.Add(this.BTRegister);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -270,6 +287,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,17 +305,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button BTRegister;
+        private System.Windows.Forms.Button BTReturn;
+        private System.Windows.Forms.TextBox TBUsername;
+        private System.Windows.Forms.TextBox TBEmail;
+        private System.Windows.Forms.TextBox TBPassword;
+        private System.Windows.Forms.TextBox TBConfirmPassword;
+        private System.Windows.Forms.TextBox TBPhoneNo;
+        private System.Windows.Forms.TextBox TBSecAns;
+        private System.Windows.Forms.TextBox TBConfirmSecAns;
+        private System.Windows.Forms.RadioButton RBFemale;
+        private System.Windows.Forms.RadioButton RBMale;
+        private System.Windows.Forms.ComboBox CBRole;
+        private System.Windows.Forms.Label label10;
     }
 }

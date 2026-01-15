@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace GMS
 {
-    internal class SQL
+    public class SQL
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-8H1FJ6S;Initial Catalog=GMS;Integrated Security=True");
+        static SqlConnection con = new SqlConnection("Data Source=ANDREA-PC\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
 
-        public void connect()
+        public static void connect()
         {
             try
             {
-                con.Open();
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
             }
             catch (Exception ex)
             {
@@ -24,11 +28,14 @@ namespace GMS
             }
         }
         
-        public void disconnect()
+        public static void disconnect()
         {
             try
             {
-                con.Close();
+                if (con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -36,17 +43,32 @@ namespace GMS
             }
         }
 
-        public void execute(String query)
+        public static void execute(String query)
         {
             try
             {
+                connect();
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
+                disconnect();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
+        }
+
+        public static DataTable getTableData(string tableName, int rows)
+        {
+            connect();
+            String query = "SELECT * FROM " + tableName;
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+            disconnect();
+            return dt;
         }
     }
 }

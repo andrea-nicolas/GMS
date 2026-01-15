@@ -26,5 +26,53 @@ namespace GMS
         {
 
         }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login loginpg = new Login();
+            loginpg.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (TBConfirmPassword.Text != TBPassword.Text)
+            {
+                MessageBox.Show("Passwords do not match!");
+                return;
+            }
+
+            if (TBConfirmSecAns.Text != TBSecAns.Text)
+            {
+                MessageBox.Show("Security Answers do not match!");
+                return;
+            }
+
+            string gender = "";
+            if (RBFemale.Checked)
+            {
+                gender = "Female";
+            }
+            else if (RBMale.Checked)
+            {
+                gender = "Male";
+            }
+
+            if (TBUsername.Text == "" || TBEmail.Text == "" || gender == "" || TBPhoneNo.Text == "" || TBPassword.Text == "" || TBSecAns.Text == "" || CBRole.Text == "")
+            {
+                MessageBox.Show("Please fill in all fields!");
+                return;
+            }
+            else
+            {
+                SQL.execute("INSERT INTO usersdb (email, gender, phoneNo, password, username, role, securityAnswer, accountStatus) VALUES ('" + TBEmail.Text + "', '" + gender + "', '" + TBPhoneNo.Text + "', '" + TBPassword.Text + "', '" + TBUsername.Text + "','" + CBRole.Text + "','" + TBSecAns + "','unapproved')");
+                MessageBox.Show("Registration Successful!");
+            }
+        }
     }
 }
