@@ -65,11 +65,11 @@ namespace GMS
             string gender = "";
             if (RBFemale.Checked)
             {
-                gender = "Female";
+                gender = "F";
             }
             else if (RBMale.Checked)
             {
-                gender = "Male";
+                gender = "M";
             }
 
             if (TBUsername.Text == "" || TBEmail.Text == "" || gender == "" || TBPhoneNo.Text == "" || TBPassword.Text == "" || TBSecAns.Text == "" || CBRole.Text == "")

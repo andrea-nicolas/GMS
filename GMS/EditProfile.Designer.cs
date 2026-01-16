@@ -96,7 +96,7 @@
             this.BTCancel.Name = "BTCancel";
             this.BTCancel.Size = new System.Drawing.Size(112, 23);
             this.BTCancel.TabIndex = 36;
-            this.BTCancel.Text = "Cancel";
+            this.BTCancel.Text = "Return";
             this.BTCancel.UseVisualStyleBackColor = true;
             this.BTCancel.Click += new System.EventHandler(this.BTCancel_Click);
             // 
@@ -169,7 +169,6 @@
             // 
             this.TBRole.Location = new System.Drawing.Point(140, 226);
             this.TBRole.Name = "TBRole";
-            this.TBRole.PasswordChar = '*';
             this.TBRole.ReadOnly = true;
             this.TBRole.Size = new System.Drawing.Size(236, 20);
             this.TBRole.TabIndex = 48;
@@ -178,7 +177,6 @@
             // 
             this.TBSecurityAnswer.Location = new System.Drawing.Point(140, 252);
             this.TBSecurityAnswer.Name = "TBSecurityAnswer";
-            this.TBSecurityAnswer.PasswordChar = '*';
             this.TBSecurityAnswer.ReadOnly = true;
             this.TBSecurityAnswer.Size = new System.Drawing.Size(236, 20);
             this.TBSecurityAnswer.TabIndex = 50;

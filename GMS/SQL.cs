@@ -72,9 +72,9 @@ namespace GMS
                 MessageBox.Show("Registration Successful!");
                 disconnect();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("ERROR: Please enter a valid phone number!\n\n Error message: " + ex.Message);
+                MessageBox.Show("ERROR: Please enter a valid phone number!");
             }
             
         }
@@ -164,10 +164,20 @@ namespace GMS
             }
         }
 
-        public static void editProfile(string username, string email, string gender, string phoneNo, string role, string secAns, string userID)
+        public static void editProfile(string username, string email, string gender, string phoneNo, short userID)
         {
-            execute("UPDATE usersdb SET username = '" + username + ", email = '" + email + "', gender = '" + gender + "' phoneNo = '" +
-                Convert.ToInt32(phoneNo) + "' WHERE userID = " + Convert.ToInt32(userID));
+            connect();
+            try
+            {
+                execute("UPDATE usersdb SET username = '" + username + "', email = '" + email + "', gender = '" + gender + "', phoneNo = " +
+                Convert.ToInt32(phoneNo) + " WHERE userID = " + userID);
+            }
+            catch 
+            {
+                MessageBox.Show("ERROR: Please enter a valid phone number!");
+            }
+            MessageBox.Show("Profile updated successfully.");
+            disconnect();
         }
 
         public static DataTable getTableData(string tableName, int rows)
