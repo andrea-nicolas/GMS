@@ -96,7 +96,7 @@
             this.BTCancel.Name = "BTCancel";
             this.BTCancel.Size = new System.Drawing.Size(112, 23);
             this.BTCancel.TabIndex = 36;
-            this.BTCancel.Text = "Return";
+            this.BTCancel.Text = "Back";
             this.BTCancel.UseVisualStyleBackColor = true;
             this.BTCancel.Click += new System.EventHandler(this.BTCancel_Click);
             // 

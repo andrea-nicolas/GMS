@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
+            this.BTResetPassword = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTCreateCart = new System.Windows.Forms.Button();
+            this.BTItemList = new System.Windows.Forms.Button();
+            this.BTPendingCarts = new System.Windows.Forms.Button();
+            this.BTLogout = new System.Windows.Forms.Button();
+            this.BTSalesLog = new System.Windows.Forms.Button();
+            this.BTEditProfile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.TBAssingedCounter = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button7
+            // BTResetPassword
             // 
-            this.button7.Location = new System.Drawing.Point(31, 207);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 44);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "Change Password";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.BTResetPassword.Location = new System.Drawing.Point(31, 207);
+            this.BTResetPassword.Name = "BTResetPassword";
+            this.BTResetPassword.Size = new System.Drawing.Size(100, 44);
+            this.BTResetPassword.TabIndex = 17;
+            this.BTResetPassword.Text = "Change Password";
+            this.BTResetPassword.UseVisualStyleBackColor = true;
+            this.BTResetPassword.Click += new System.EventHandler(this.button7_Click);
             // 
             // label2
             // 
@@ -60,65 +60,65 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Assigned Counter:";
             // 
-            // button6
+            // BTCreateCart
             // 
-            this.button6.Location = new System.Drawing.Point(261, 183);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 32);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Create Cart";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.BTCreateCart.Location = new System.Drawing.Point(261, 183);
+            this.BTCreateCart.Name = "BTCreateCart";
+            this.BTCreateCart.Size = new System.Drawing.Size(100, 32);
+            this.BTCreateCart.TabIndex = 15;
+            this.BTCreateCart.Text = "Create Cart";
+            this.BTCreateCart.UseVisualStyleBackColor = true;
+            this.BTCreateCart.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // BTItemList
             // 
-            this.button5.Location = new System.Drawing.Point(624, 183);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 32);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Item List";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.BTItemList.Location = new System.Drawing.Point(624, 183);
+            this.BTItemList.Name = "BTItemList";
+            this.BTItemList.Size = new System.Drawing.Size(100, 32);
+            this.BTItemList.TabIndex = 14;
+            this.BTItemList.Text = "Item List";
+            this.BTItemList.UseVisualStyleBackColor = true;
+            this.BTItemList.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // BTPendingCarts
             // 
-            this.button4.Location = new System.Drawing.Point(452, 183);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 32);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Pending Carts";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.BTPendingCarts.Location = new System.Drawing.Point(452, 183);
+            this.BTPendingCarts.Name = "BTPendingCarts";
+            this.BTPendingCarts.Size = new System.Drawing.Size(100, 32);
+            this.BTPendingCarts.TabIndex = 13;
+            this.BTPendingCarts.Text = "Pending Carts";
+            this.BTPendingCarts.UseVisualStyleBackColor = true;
+            this.BTPendingCarts.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // BTLogout
             // 
-            this.button3.Location = new System.Drawing.Point(41, 404);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 21);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Log Out";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BTLogout.Location = new System.Drawing.Point(41, 404);
+            this.BTLogout.Name = "BTLogout";
+            this.BTLogout.Size = new System.Drawing.Size(70, 21);
+            this.BTLogout.TabIndex = 12;
+            this.BTLogout.Text = "Log Out";
+            this.BTLogout.UseVisualStyleBackColor = true;
+            this.BTLogout.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // BTSalesLog
             // 
-            this.button2.Location = new System.Drawing.Point(31, 108);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 32);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "My Sales Log";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BTSalesLog.Location = new System.Drawing.Point(31, 108);
+            this.BTSalesLog.Name = "BTSalesLog";
+            this.BTSalesLog.Size = new System.Drawing.Size(100, 32);
+            this.BTSalesLog.TabIndex = 11;
+            this.BTSalesLog.Text = "My Sales Log";
+            this.BTSalesLog.UseVisualStyleBackColor = true;
+            this.BTSalesLog.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // BTEditProfile
             // 
-            this.button1.Location = new System.Drawing.Point(31, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 32);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Edit Profile";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BTEditProfile.Location = new System.Drawing.Point(31, 157);
+            this.BTEditProfile.Name = "BTEditProfile";
+            this.BTEditProfile.Size = new System.Drawing.Size(100, 32);
+            this.BTEditProfile.TabIndex = 10;
+            this.BTEditProfile.Text = "Edit Profile";
+            this.BTEditProfile.UseVisualStyleBackColor = true;
+            this.BTEditProfile.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -156,14 +156,14 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TBAssingedCounter);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.BTResetPassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTCreateCart);
+            this.Controls.Add(this.BTItemList);
+            this.Controls.Add(this.BTPendingCarts);
+            this.Controls.Add(this.BTLogout);
+            this.Controls.Add(this.BTSalesLog);
+            this.Controls.Add(this.BTEditProfile);
             this.Controls.Add(this.label1);
             this.Name = "SPDashboard";
             this.Text = "SPDashboard";
@@ -175,14 +175,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BTResetPassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTCreateCart;
+        private System.Windows.Forms.Button BTItemList;
+        private System.Windows.Forms.Button BTPendingCarts;
+        private System.Windows.Forms.Button BTLogout;
+        private System.Windows.Forms.Button BTSalesLog;
+        private System.Windows.Forms.Button BTEditProfile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox TBAssingedCounter;

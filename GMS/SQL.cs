@@ -180,10 +180,10 @@ namespace GMS
             disconnect();
         }
 
-        public static DataTable getTableData(string tableName, int rows)
+        public static DataTable getTableData(string tableName, string condition)
         {
             connect();
-            String query = "SELECT * FROM " + tableName;
+            String query = "SELECT * FROM " + tableName + condition;
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -191,6 +191,24 @@ namespace GMS
             DataTable dt = ds.Tables[0];
             disconnect();
             return dt;
+        }
+
+        public static float getColumnSum (string columnName, string tableName, string condition)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("SELECT SUM(\"" + columnName + "\") FROM " + tableName + condition, con);
+
+            object result = cmd.ExecuteScalar();
+
+            if (result == null)
+            {  
+                return 0;  
+            }
+            else
+            {
+                disconnect();
+                return Convert.ToSingle(result);
+            }
         }
     }
 }
