@@ -12,9 +12,16 @@ namespace GMS
 {
     public partial class SPViewItemList : Form
     {
-        public SPViewItemList()
+        short userID = 0;
+        public SPViewItemList(short currentUser)
         {
             InitializeComponent();
+            userID = currentUser;
+        }
+
+        private void SPViewItemList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

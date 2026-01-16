@@ -9,12 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GMS
-{
+{ 
     public partial class SPSalesLog : Form
     {
-        public SPSalesLog()
+        short userID = 0;
+        public SPSalesLog(short currentUser)
         {
             InitializeComponent();
+            userID = currentUser;
+        }
+
+        private void SPSalesLog_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

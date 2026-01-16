@@ -12,9 +12,16 @@ namespace GMS
 {
     public partial class SPViewPendingCarts : Form
     {
-        public SPViewPendingCarts()
+        short userID = 0;
+        public SPViewPendingCarts(short currentUser)
         {
             InitializeComponent();
+            userID = currentUser;
+        }
+
+        private void SPViewPendingCarts_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

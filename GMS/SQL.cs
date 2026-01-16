@@ -79,7 +79,7 @@ namespace GMS
             
         }
 
-        public static string checkCredentials (string username, string password)
+        public static short checkCredentials (string username, string password)
         {
             connect();
             SqlCommand cmd = new SqlCommand("SELECT * FROM usersdb WHERE username = '" + username + "' AND password = '" + password + "'", con);
@@ -91,18 +91,36 @@ namespace GMS
                 {
                     MessageBox.Show("Account status is innactive. Please contact Admin.");
                     disconnect();
-                    return "invalid";
+                    return -1;
                 }
                 else
                 {
                     MessageBox.Show("Login Successful");
-                    return reader["role"].ToString(); 
+                    return Convert.ToInt16(reader["userID"]);
                 }
             }
             else
             {
                 disconnect();
-                return "invalid";
+                return -1;
+            }
+        }
+
+        public static string getUserDetail(string detail, short userID)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM usersdb WHERE userID = " + userID, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string result = reader[detail].ToString();
+                disconnect();
+                return result;
+            }
+            else
+            {
+                disconnect();
+                return null;
             }
         }
 
@@ -133,7 +151,7 @@ namespace GMS
             {
                 disconnect();
                 connect();
-                SQL.execute("UPDATE usersdb SET password = '"+ newPass +"' WHERE username = '" + username + "'");
+                execute("UPDATE usersdb SET password = '"+ newPass +"' WHERE username = '" + username + "'");
                 MessageBox.Show("Password reset successful.");
                 disconnect();
                 return;
@@ -144,6 +162,12 @@ namespace GMS
                 disconnect();
                 return;
             }
+        }
+
+        public static void editProfile(string username, string email, string gender, string phoneNo, string role, string secAns, string userID)
+        {
+            execute("UPDATE usersdb SET username = '" + username + ", email = '" + email + "', gender = '" + gender + "' phoneNo = '" +
+                Convert.ToInt32(phoneNo) + "' WHERE userID = " + Convert.ToInt32(userID));
         }
 
         public static DataTable getTableData(string tableName, int rows)

@@ -156,6 +156,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SPDashboard";
             this.Text = "SPDashboard";
+            this.Load += new System.EventHandler(this.SPDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

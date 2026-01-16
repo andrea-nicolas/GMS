@@ -252,6 +252,7 @@
             this.Controls.Add(this.label5);
             this.Name = "SPViewItemList";
             this.Text = "SPViewItemList";
+            this.Load += new System.EventHandler(this.SPViewItemList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

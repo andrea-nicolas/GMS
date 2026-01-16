@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GMS
-{
+{    
     public partial class ForgotPassword : Form
     {
-        public ForgotPassword()
+        short userID = 0;
+        public ForgotPassword(short currentUser)
         {
             InitializeComponent();
+            userID = currentUser;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -56,9 +58,18 @@ namespace GMS
 
         private void BTBack_Click(object sender, EventArgs e)
         {
-            Login loginpg = new Login();
-            loginpg.Show();
-            this.Hide();
+            if ( userID == 0)
+            {
+                Login loginpg = new Login();
+                loginpg.Show(); 
+                this.Hide();
+            }
+            else
+            {
+                SPDashboard spdashboard = new SPDashboard(userID);
+                spdashboard.Show();
+                this.Hide();
+            }      
         }
     }
 }

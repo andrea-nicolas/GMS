@@ -12,21 +12,23 @@ namespace GMS
 {
     public partial class SPDashboard : Form
     {
-        public SPDashboard()
+        short userID = 0;
+        public SPDashboard(short currentUser)
         {
             InitializeComponent();
+            userID = currentUser;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SPSalesLog sPSalesLogpg = new SPSalesLog();
+            SPSalesLog sPSalesLogpg = new SPSalesLog(userID);
             sPSalesLogpg.Show();
             this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ForgotPassword forgotPasswordpg = new ForgotPassword();
+            ForgotPassword forgotPasswordpg = new ForgotPassword(userID);
             forgotPasswordpg.Show();
             this.Hide();
         }
@@ -45,26 +47,33 @@ namespace GMS
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SPEditCart sPEditCartpg = new SPEditCart();
+            SPEditCart sPEditCartpg = new SPEditCart(userID);
             sPEditCartpg.Show();
             this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SPViewPendingCarts sPViewPendingCartspg = new SPViewPendingCarts();
+            SPViewPendingCarts sPViewPendingCartspg = new SPViewPendingCarts(userID);
             sPViewPendingCartspg.Show();
             this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SPViewItemList sPViewItemListpg = new SPViewItemList();
+            SPViewItemList sPViewItemListpg = new SPViewItemList(userID);
             sPViewItemListpg.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfilepg = new EditProfile(userID);
+            editProfilepg.Show();
+            this.Hide();
+        }
+
+        private void SPDashboard_Load(object sender, EventArgs e)
         {
 
         }
