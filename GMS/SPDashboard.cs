@@ -17,6 +17,7 @@ namespace GMS
         {
             InitializeComponent();
             userID = currentUser;
+            TBAssingedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace GMS
         private void SPDashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

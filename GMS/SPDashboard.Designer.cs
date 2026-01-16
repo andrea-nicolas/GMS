@@ -38,6 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.TBAssingedCounter = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button7
@@ -139,11 +140,21 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // TBAssingedCounter
+            // 
+            this.TBAssingedCounter.Location = new System.Drawing.Point(127, 47);
+            this.TBAssingedCounter.Name = "TBAssingedCounter";
+            this.TBAssingedCounter.ReadOnly = true;
+            this.TBAssingedCounter.Size = new System.Drawing.Size(36, 20);
+            this.TBAssingedCounter.TabIndex = 19;
+            this.TBAssingedCounter.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // SPDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TBAssingedCounter);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
@@ -174,5 +185,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox TBAssingedCounter;
     }
 }
