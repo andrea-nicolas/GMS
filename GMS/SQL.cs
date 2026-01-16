@@ -90,15 +90,18 @@ namespace GMS
                 if (reader["accountStatus"].ToString() == "innactive")
                 {
                     MessageBox.Show("Account status is innactive. Please contact Admin.");
+                    disconnect();
                     return "invalid";
                 }
                 else
                 {
-                    return reader["role"].ToString();
+                    MessageBox.Show("Login Successful");
+                    return reader["role"].ToString(); 
                 }
             }
             else
             {
+                disconnect();
                 return "invalid";
             }
         }

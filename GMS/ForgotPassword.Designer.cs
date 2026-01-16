@@ -107,6 +107,7 @@
             // 
             this.TBPassword.Location = new System.Drawing.Point(501, 162);
             this.TBPassword.Name = "TBPassword";
+            this.TBPassword.PasswordChar = '*';
             this.TBPassword.Size = new System.Drawing.Size(234, 20);
             this.TBPassword.TabIndex = 7;
             // 
@@ -114,6 +115,7 @@
             // 
             this.TBConfirmPass.Location = new System.Drawing.Point(501, 216);
             this.TBConfirmPass.Name = "TBConfirmPass";
+            this.TBConfirmPass.PasswordChar = '*';
             this.TBConfirmPass.Size = new System.Drawing.Size(234, 20);
             this.TBConfirmPass.TabIndex = 8;
             // 

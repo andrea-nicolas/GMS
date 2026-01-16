@@ -147,7 +147,7 @@
             // 
             // BTRegister
             // 
-            this.BTRegister.Location = new System.Drawing.Point(401, 355);
+            this.BTRegister.Location = new System.Drawing.Point(279, 355);
             this.BTRegister.Name = "BTRegister";
             this.BTRegister.Size = new System.Drawing.Size(112, 23);
             this.BTRegister.TabIndex = 12;
@@ -157,7 +157,7 @@
             // 
             // BTReturn
             // 
-            this.BTReturn.Location = new System.Drawing.Point(283, 355);
+            this.BTReturn.Location = new System.Drawing.Point(397, 355);
             this.BTReturn.Name = "BTReturn";
             this.BTReturn.Size = new System.Drawing.Size(112, 23);
             this.BTReturn.TabIndex = 13;
@@ -183,6 +183,7 @@
             // 
             this.TBPassword.Location = new System.Drawing.Point(118, 188);
             this.TBPassword.Name = "TBPassword";
+            this.TBPassword.PasswordChar = '*';
             this.TBPassword.Size = new System.Drawing.Size(236, 20);
             this.TBPassword.TabIndex = 16;
             // 
@@ -190,6 +191,7 @@
             // 
             this.TBConfirmPassword.Location = new System.Drawing.Point(118, 214);
             this.TBConfirmPassword.Name = "TBConfirmPassword";
+            this.TBConfirmPassword.PasswordChar = '*';
             this.TBConfirmPassword.Size = new System.Drawing.Size(236, 20);
             this.TBConfirmPassword.TabIndex = 17;
             // 

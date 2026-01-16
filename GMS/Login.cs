@@ -39,7 +39,6 @@ namespace GMS
             {
                 string role = SQL.checkCredentials(TBUsername.Text, TBPassword.Text);
                 SQL.disconnect();
-                MessageBox.Show("Login Successful");
                 if (role == "salesperson")
                 {
                     SPDashboard sPDashboard = new SPDashboard();
