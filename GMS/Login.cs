@@ -37,7 +37,7 @@ namespace GMS
             }
             else
             {
-                string role = SQL.checkCredentials("SELECT * FROM usersdb WHERE username = '" + TBUsername.Text + "' AND password = '" + TBPassword.Text + "'");
+                string role = SQL.checkCredentials(TBUsername.Text, TBPassword.Text);
                 SQL.disconnect();
                 MessageBox.Show("Login Successful");
                 if (role == "salesperson")

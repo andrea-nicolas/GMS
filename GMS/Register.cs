@@ -41,21 +41,23 @@ namespace GMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (SQL.checkCredentials("SELECT * FROM usersdb WHERE username = '" + TBUsername.Text + "'") != "invalid")
+            if (SQL.checkUsernameExists(TBUsername.Text))
             {
                 SQL.disconnect();
-                MessageBox.Show("Username already exists!");
+                MessageBox.Show("Username is taken!");
                 return;
             }
 
             if (TBConfirmPassword.Text != TBPassword.Text)
             {
+                SQL.disconnect();
                 MessageBox.Show("Passwords do not match!");
                 return;
             }
 
             if (TBConfirmSecAns.Text != TBSecAns.Text)
             {
+                SQL.disconnect();
                 MessageBox.Show("Security Answers do not match!");
                 return;
             }
@@ -72,13 +74,13 @@ namespace GMS
 
             if (TBUsername.Text == "" || TBEmail.Text == "" || gender == "" || TBPhoneNo.Text == "" || TBPassword.Text == "" || TBSecAns.Text == "" || CBRole.Text == "")
             {
+                SQL.disconnect();
                 MessageBox.Show("Please fill in all fields!");
                 return;
             }
             else
             {
-                SQL.execute("INSERT INTO usersdb (email, gender, phoneNo, password, username, role, securityAnswer, accountStatus) VALUES ('" + TBEmail.Text + "', '" + gender + "', '" + TBPhoneNo.Text + "', '" + TBPassword.Text + "', '" + TBUsername.Text + "','" + CBRole.Text + "','" + TBSecAns + "','innactive')");
-                MessageBox.Show("Registration Successful!");
+                SQL.insertNewUser(TBEmail.Text, gender, TBPhoneNo.Text, TBPassword.Text, TBUsername.Text, CBRole.Text, TBSecAns.Text);
             }
         }
     }

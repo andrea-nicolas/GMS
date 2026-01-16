@@ -33,12 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TBUsername = new System.Windows.Forms.TextBox();
+            this.TBSecAns = new System.Windows.Forms.TextBox();
+            this.TBPassword = new System.Windows.Forms.TextBox();
+            this.TBConfirmPass = new System.Windows.Forms.TextBox();
+            this.BTConfirm = new System.Windows.Forms.Button();
+            this.BTBack = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -88,51 +88,54 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Confirm Password:";
             // 
-            // textBox1
+            // TBUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 5;
+            this.TBUsername.Location = new System.Drawing.Point(138, 163);
+            this.TBUsername.Name = "TBUsername";
+            this.TBUsername.Size = new System.Drawing.Size(234, 20);
+            this.TBUsername.TabIndex = 5;
+            this.TBUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // TBSecAns
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 216);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 6;
+            this.TBSecAns.Location = new System.Drawing.Point(138, 216);
+            this.TBSecAns.Name = "TBSecAns";
+            this.TBSecAns.Size = new System.Drawing.Size(234, 20);
+            this.TBSecAns.TabIndex = 6;
             // 
-            // textBox3
+            // TBPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(501, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 20);
-            this.textBox3.TabIndex = 7;
+            this.TBPassword.Location = new System.Drawing.Point(501, 162);
+            this.TBPassword.Name = "TBPassword";
+            this.TBPassword.Size = new System.Drawing.Size(234, 20);
+            this.TBPassword.TabIndex = 7;
             // 
-            // textBox4
+            // TBConfirmPass
             // 
-            this.textBox4.Location = new System.Drawing.Point(501, 216);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 20);
-            this.textBox4.TabIndex = 8;
+            this.TBConfirmPass.Location = new System.Drawing.Point(501, 216);
+            this.TBConfirmPass.Name = "TBConfirmPass";
+            this.TBConfirmPass.Size = new System.Drawing.Size(234, 20);
+            this.TBConfirmPass.TabIndex = 8;
             // 
-            // button1
+            // BTConfirm
             // 
-            this.button1.Location = new System.Drawing.Point(266, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTConfirm.Location = new System.Drawing.Point(266, 275);
+            this.BTConfirm.Name = "BTConfirm";
+            this.BTConfirm.Size = new System.Drawing.Size(128, 23);
+            this.BTConfirm.TabIndex = 9;
+            this.BTConfirm.Text = "Confirm";
+            this.BTConfirm.UseVisualStyleBackColor = true;
+            this.BTConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BTBack
             // 
-            this.button2.Location = new System.Drawing.Point(400, 275);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTBack.Location = new System.Drawing.Point(400, 275);
+            this.BTBack.Name = "BTBack";
+            this.BTBack.Size = new System.Drawing.Size(128, 23);
+            this.BTBack.TabIndex = 10;
+            this.BTBack.Text = "Cancel";
+            this.BTBack.UseVisualStyleBackColor = true;
+            this.BTBack.Click += new System.EventHandler(this.BTBack_Click);
             // 
             // label6
             // 
@@ -149,12 +152,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BTBack);
+            this.Controls.Add(this.BTConfirm);
+            this.Controls.Add(this.TBConfirmPass);
+            this.Controls.Add(this.TBPassword);
+            this.Controls.Add(this.TBSecAns);
+            this.Controls.Add(this.TBUsername);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -162,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ForgotPassword";
             this.Text = "ForgotPassword";
+            this.Load += new System.EventHandler(this.ForgotPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,12 +178,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox TBUsername;
+        private System.Windows.Forms.TextBox TBSecAns;
+        private System.Windows.Forms.TextBox TBPassword;
+        private System.Windows.Forms.TextBox TBConfirmPass;
+        private System.Windows.Forms.Button BTConfirm;
+        private System.Windows.Forms.Button BTBack;
         private System.Windows.Forms.Label label6;
     }
 }

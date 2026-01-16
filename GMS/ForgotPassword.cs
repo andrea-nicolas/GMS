@@ -21,5 +21,44 @@ namespace GMS
         {
 
         }
+
+        private void ForgotPassword_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (TBUsername.Text == "" || TBSecAns.Text == "" || TBPassword.Text == "" || TBConfirmPass.Text == "")    
+            {
+                MessageBox.Show("Please fill in all fields");
+                return;
+            }
+            else
+            {
+                if (TBConfirmPass.Text != TBPassword.Text)
+                {
+                    MessageBox.Show("Entered passwords do not match");
+                    return;
+                }
+                else
+                {
+                    SQL.resetPassword(TBUsername.Text, TBSecAns.Text, TBPassword.Text);
+
+                }
+            }
+        }
+
+        private void BTBack_Click(object sender, EventArgs e)
+        {
+            Login loginpg = new Login();
+            loginpg.Show();
+            this.Hide();
+        }
     }
 }
