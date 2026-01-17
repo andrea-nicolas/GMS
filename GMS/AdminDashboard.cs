@@ -36,42 +36,43 @@ namespace GMS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AdminItemsCrud().Show();
+             
+            //AdminItemsCrud().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminApprovals().Show();
+            //AdminApprovals().Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminUserList().Show();
+            //AdminUserList().Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            AdminSalesReport().Show();
+            //AdminSalesReport().Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AdminSalespersonLogs().Show();
+           // AdminSalespersonLogs().Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AdminManagersCrud().Show();
+            //AdminManagersCrud().Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AdminEmployeesCrud().Show();
+            //AdminEmployeesCrud().Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AdminActivityLog().Show();
+            //AdminActivityLog().Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
