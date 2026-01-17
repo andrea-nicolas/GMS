@@ -210,5 +210,22 @@ namespace GMS
                 return Convert.ToSingle(result);
             }
         }
+
+        public static bool checkNotificationExists (short itemID)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM stockNotificationdb WHERE itemID = " + itemID + " AND stockNotificationStatus = 'pending'", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                disconnect();
+                return true;
+            }
+            else
+            {
+                disconnect();
+                return false;
+            }
+        }
     }
 }

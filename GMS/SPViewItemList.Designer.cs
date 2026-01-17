@@ -38,18 +38,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.TBitemID = new System.Windows.Forms.TextBox();
             this.TBname = new System.Windows.Forms.TextBox();
-            this.TBPrice = new System.Windows.Forms.TextBox();
-            this.TBqty = new System.Windows.Forms.TextBox();
             this.BTNotify = new System.Windows.Forms.Button();
             this.BTDashboard = new System.Windows.Forms.Button();
             this.CBcategory = new System.Windows.Forms.ComboBox();
             this.TBAssignedCounter = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.TBLitems = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TBQty = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TBLitems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,24 +145,6 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Category:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(595, 340);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Price:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(537, 370);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 13);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Quantity In Stock:";
-            // 
             // TBitemID
             // 
             this.TBitemID.Location = new System.Drawing.Point(279, 336);
@@ -179,30 +159,15 @@
             this.TBname.Size = new System.Drawing.Size(100, 20);
             this.TBname.TabIndex = 38;
             // 
-            // TBPrice
-            // 
-            this.TBPrice.Location = new System.Drawing.Point(635, 337);
-            this.TBPrice.Name = "TBPrice";
-            this.TBPrice.ReadOnly = true;
-            this.TBPrice.Size = new System.Drawing.Size(100, 20);
-            this.TBPrice.TabIndex = 40;
-            // 
-            // TBqty
-            // 
-            this.TBqty.Location = new System.Drawing.Point(635, 363);
-            this.TBqty.Name = "TBqty";
-            this.TBqty.ReadOnly = true;
-            this.TBqty.Size = new System.Drawing.Size(100, 20);
-            this.TBqty.TabIndex = 41;
-            // 
             // BTNotify
             // 
-            this.BTNotify.Location = new System.Drawing.Point(540, 398);
+            this.BTNotify.Location = new System.Drawing.Point(550, 359);
             this.BTNotify.Name = "BTNotify";
-            this.BTNotify.Size = new System.Drawing.Size(195, 23);
+            this.BTNotify.Size = new System.Drawing.Size(195, 66);
             this.BTNotify.TabIndex = 42;
             this.BTNotify.Text = "Notify Low Stock";
             this.BTNotify.UseVisualStyleBackColor = true;
+            this.BTNotify.Click += new System.EventHandler(this.BTNotify_Click);
             // 
             // BTDashboard
             // 
@@ -228,6 +193,7 @@
             this.CBcategory.Name = "CBcategory";
             this.CBcategory.Size = new System.Drawing.Size(100, 21);
             this.CBcategory.TabIndex = 44;
+            this.CBcategory.SelectedIndexChanged += new System.EventHandler(this.CBcategory_SelectedIndexChanged);
             // 
             // TBAssignedCounter
             // 
@@ -246,6 +212,7 @@
             this.button1.TabIndex = 45;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TBLitems
             // 
@@ -256,23 +223,38 @@
             this.TBLitems.TabIndex = 46;
             this.TBLitems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(547, 335);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 13);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Quantity In Stock:";
+            // 
+            // TBQty
+            // 
+            this.TBQty.Location = new System.Drawing.Point(645, 332);
+            this.TBQty.Name = "TBQty";
+            this.TBQty.ReadOnly = true;
+            this.TBQty.Size = new System.Drawing.Size(100, 20);
+            this.TBQty.TabIndex = 48;
+            // 
             // SPViewItemList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TBQty);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.TBLitems);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TBAssignedCounter);
             this.Controls.Add(this.CBcategory);
             this.Controls.Add(this.BTDashboard);
             this.Controls.Add(this.BTNotify);
-            this.Controls.Add(this.TBqty);
-            this.Controls.Add(this.TBPrice);
             this.Controls.Add(this.TBname);
             this.Controls.Add(this.TBitemID);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -304,17 +286,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TBitemID;
         private System.Windows.Forms.TextBox TBname;
-        private System.Windows.Forms.TextBox TBPrice;
-        private System.Windows.Forms.TextBox TBqty;
         private System.Windows.Forms.Button BTNotify;
         private System.Windows.Forms.Button BTDashboard;
         private System.Windows.Forms.ComboBox CBcategory;
         private System.Windows.Forms.TextBox TBAssignedCounter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView TBLitems;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TBQty;
     }
 }
