@@ -273,6 +273,12 @@
     <Compile Include="SPEditCart.Designer.cs">
       <DependentUpon>SPEditCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="SPManageCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPManageCart.Designer.cs">
+      <DependentUpon>SPManageCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="SPSalesLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SPEditCart.resx">
       <DependentUpon>SPEditCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPManageCart.resx">
+      <DependentUpon>SPManageCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SPSalesLog.resx">
       <DependentUpon>SPSalesLog.cs</DependentUpon>

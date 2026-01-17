@@ -66,7 +66,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(488, 339);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 21);
             this.button3.TabIndex = 22;
@@ -78,7 +78,7 @@
             // 
             this.TBLcart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TBLcart.Location = new System.Drawing.Point(20, 32);
-            this.TBLcart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBLcart.Margin = new System.Windows.Forms.Padding(2);
             this.TBLcart.Name = "TBLcart";
             this.TBLcart.Size = new System.Drawing.Size(565, 141);
             this.TBLcart.TabIndex = 23;
@@ -149,7 +149,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(362, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(190, 36);
             this.button2.TabIndex = 31;
@@ -212,7 +212,7 @@
             // TBitemID
             // 
             this.TBitemID.Location = new System.Drawing.Point(483, 67);
-            this.TBitemID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBitemID.Margin = new System.Windows.Forms.Padding(2);
             this.TBitemID.Name = "TBitemID";
             this.TBitemID.Size = new System.Drawing.Size(92, 20);
             this.TBitemID.TabIndex = 37;
@@ -220,7 +220,7 @@
             // TBname
             // 
             this.TBname.Location = new System.Drawing.Point(483, 89);
-            this.TBname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBname.Margin = new System.Windows.Forms.Padding(2);
             this.TBname.Name = "TBname";
             this.TBname.Size = new System.Drawing.Size(92, 20);
             this.TBname.TabIndex = 38;
@@ -228,7 +228,7 @@
             // TBunitPrice
             // 
             this.TBunitPrice.Location = new System.Drawing.Point(483, 131);
-            this.TBunitPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBunitPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TBunitPrice.Name = "TBunitPrice";
             this.TBunitPrice.ReadOnly = true;
             this.TBunitPrice.Size = new System.Drawing.Size(92, 20);
@@ -237,7 +237,7 @@
             // TBtotalPrice
             // 
             this.TBtotalPrice.Location = new System.Drawing.Point(83, 255);
-            this.TBtotalPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBtotalPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TBtotalPrice.Name = "TBtotalPrice";
             this.TBtotalPrice.ReadOnly = true;
             this.TBtotalPrice.Size = new System.Drawing.Size(91, 20);
@@ -246,7 +246,7 @@
             // TBCartTotalPrice
             // 
             this.TBCartTotalPrice.Location = new System.Drawing.Point(502, 234);
-            this.TBCartTotalPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBCartTotalPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TBCartTotalPrice.Name = "TBCartTotalPrice";
             this.TBCartTotalPrice.ReadOnly = true;
             this.TBCartTotalPrice.Size = new System.Drawing.Size(76, 20);
@@ -255,15 +255,16 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(286, 209);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 44;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(390, 228);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(100, 20);
@@ -273,7 +274,7 @@
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(98, 224);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(100, 20);
