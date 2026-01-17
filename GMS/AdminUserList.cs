@@ -33,6 +33,8 @@ namespace GMS
 
         private void AdminUserList_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gMSDataSet1.usersDB' table. You can move, or remove it, as needed.
+            this.usersDBTableAdapter.Fill(this.gMSDataSet1.usersDB);
             LoadUsers();
         }
 

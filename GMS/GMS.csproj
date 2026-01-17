@@ -240,6 +240,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GMSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +300,9 @@
     <EmbeddedResource Include="AdminActivityLog.resx">
       <DependentUpon>AdminActivityLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserList.resx">
+      <DependentUpon>AdminUserList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +352,17 @@
     </None>
     <None Include="GMSDataSet.xss">
       <DependentUpon>GMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet1.xsc">
+      <DependentUpon>GMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet1.xss">
+      <DependentUpon>GMSDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
