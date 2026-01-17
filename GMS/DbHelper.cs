@@ -18,7 +18,7 @@ namespace GMS
     }
     public class DbHelper
     {
-        public static SqlConnection con = new SqlConnection("Data Source=ANDREA-PC\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
+        public static SqlConnection con = new SqlConnection("Data Source=SUMAIYA\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
 
         public static Result GetQueryData(string query)
         {
