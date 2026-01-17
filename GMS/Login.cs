@@ -50,8 +50,8 @@ namespace GMS
                 }
                 else if ( role == "admin")
                 {
-                    //Admin admin = new Admin();
-                    //admin.Show();
+                    AdminDashboard admin = new AdminDashboard(userID);
+                    admin.Show();
                     this.Hide();
                 }
                 else
