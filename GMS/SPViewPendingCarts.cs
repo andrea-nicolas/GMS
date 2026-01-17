@@ -19,6 +19,7 @@ namespace GMS
             userID = currentUser;
             TBAssignedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
             TBLCarts.DataSource = SQL.getTableData("cartsdb", " WHERE cartStatus = 'pending'");
+            TBLCarts.DataSource = SQL.getTableData("cartsdb", " WHERE cartStatus = 'pending'");
         }
 
         private void SPViewPendingCarts_Load(object sender, EventArgs e)
@@ -96,7 +97,7 @@ namespace GMS
         private void button4_Click(object sender, EventArgs e)
         {
             short cartID = Convert.ToInt16(TBcartID.Text);
-            SPEditCart speditcartpg = new SPEditCart(userID, cartID);
+            SPManageCart speditcartpg = new SPManageCart(userID, cartID);
             speditcartpg.Show();
             this.Hide();
         }

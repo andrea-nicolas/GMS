@@ -50,7 +50,12 @@ namespace GMS
         {
             SQL.execute("INSERT INTO cartsDB (soldByUserID, discountID, cartStatus) VALUES (" + userID + ", NULL, 'new')");
             short cartID = SQL.getCartID(userID);
-            SPEditCart sPEditCartpg = new SPEditCart(userID, cartID);
+            SQL.execute("INSERT INTO salesLogdb (cartID, soldByUserID, salesDT, salesTotal) VALUES ("
+            + cartID + ", "
+            + userID + ", '"
+            + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 0)");
+
+            SPManageCart sPEditCartpg = new SPManageCart(userID, cartID);
             sPEditCartpg.Show();
             this.Hide();
         }
