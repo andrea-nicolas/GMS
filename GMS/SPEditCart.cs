@@ -13,10 +13,12 @@ namespace GMS
     public partial class SPEditCart : Form
     {
         short userID = 0;
-        public SPEditCart(short currentUser)
+        short cartID = 0;
+        public SPEditCart(short currentUser, short currentCart)
         {
             InitializeComponent();
             userID = currentUser;
+            cartID = currentCart;
         }
 
         private void label3_Click(object sender, EventArgs e)
