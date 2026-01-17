@@ -221,7 +221,10 @@
             this.TBLitems.Name = "TBLitems";
             this.TBLitems.Size = new System.Drawing.Size(562, 256);
             this.TBLitems.TabIndex = 46;
+            this.TBLitems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.TBLitems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.TBLitems.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.TBLitems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label7
             // 

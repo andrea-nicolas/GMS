@@ -95,7 +95,8 @@ namespace GMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SPEditCart speditcartpg = new SPEditCart(userID, Convert.ToInt16(TBcartID));
+            short cartID = Convert.ToInt16(TBcartID.Text);
+            SPEditCart speditcartpg = new SPEditCart(userID, cartID);
             speditcartpg.Show();
             this.Hide();
         }

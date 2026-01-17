@@ -56,7 +56,7 @@ namespace GMS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR: " + ex.Message);
+                throw ex;
             }
         }
 
@@ -121,6 +121,24 @@ namespace GMS
             {
                 disconnect();
                 return null;
+            }
+        }
+
+        public static short getCartID(short userID)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM cartsdb WHERE soldByUserID = " + userID + " AND cartStatus = 'new'", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string result = reader["cartID"].ToString();
+                disconnect();
+                return Convert.ToInt16(result);
+            }
+            else
+            {
+                disconnect();
+                return 0;
             }
         }
 

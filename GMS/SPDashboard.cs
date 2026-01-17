@@ -48,7 +48,9 @@ namespace GMS
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SPEditCart sPEditCartpg = new SPEditCart(userID);
+            SQL.execute("INSERT INTO cartsDB (soldByUserID, discountID, cartStatus) VALUES (" + userID + ", NULL, 'new')");
+            short cartID = SQL.getCartID(userID);
+            SPEditCart sPEditCartpg = new SPEditCart(userID, cartID);
             sPEditCartpg.Show();
             this.Hide();
         }

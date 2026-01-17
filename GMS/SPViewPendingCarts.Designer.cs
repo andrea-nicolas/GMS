@@ -165,7 +165,10 @@
             this.TBLCarts.Name = "TBLCarts";
             this.TBLCarts.Size = new System.Drawing.Size(580, 265);
             this.TBLCarts.TabIndex = 43;
+            this.TBLCarts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.TBLCarts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.TBLCarts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.TBLCarts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button5
             // 
