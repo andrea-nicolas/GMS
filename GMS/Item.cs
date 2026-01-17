@@ -23,19 +23,19 @@ namespace GMS
         {
             try
             {
-                string query = @"SELECT ItemId, name, category, price, qtnlnStock
-               FROM ManageItem";
+                string query = @"SELECT ItemId, itemName, category, price, qtyInStock
+               FROM itemsdb";
 
                 if (!string.IsNullOrEmpty(SearchValue))
                 {
                     int id;
                     if(int.TryParse(SearchValue, out id))
                     {
-                        query += " where ItemId=" + id + "Or Name LIKE'%" + SearchValue + "%'";
+                        query += " where ItemId=" + id + "Or itemName LIKE'%" + SearchValue + "%'";
                     }
                     else
                     {
-                        query += "where name LIKE'%'";
+                        query += "where itemName LIKE'%'";
                     }
                 }
                 var result = DbHelper.GetQueryData(query);
@@ -123,7 +123,7 @@ namespace GMS
 
                 if (txtItemId.Text == "Auto Generate")
                 {
-                    string query = "INSERT INTO ManageItem (name, category, price, qtnlnStock) " +
+                    string query = "INSERT INTO itemsdb (itemName, category, price, qtyInStock) " +
                "VALUES ('" + ItemName + "','" +
                ItemCategory + "'," +
                Price + "," +
@@ -141,11 +141,11 @@ namespace GMS
 
                  else
                 {
-                    string query = "UPDATE ManageItem SET " +
-                "name = '" + ItemName + "', " +
+                    string query = "UPDATE itemsdb SET " +
+                "itemName = '" + ItemName + "', " +
                 "category = '" + ItemCategory + "', " +
                 "price = " + Price + ", " +
-                "qtnlnStock = " + quantityInStock + " " +
+                "qtyInStock = " + quantityInStock + " " +
                 "WHERE ItemId = " + txtItemId.Text;
 
                     var result = DbHelper.ExecutableNonResultQuery(query);
@@ -180,7 +180,7 @@ namespace GMS
                     return; 
 
                 }
-                string query = "delete from ManageItem where ItemId=" + txtItemId.Text;
+                string query = "delete from itemsdb where ItemId=" + txtItemId.Text;
                 var result = DbHelper.ExecutableNonResultQuery(query);
                 if (result.HasError)
                 {
@@ -211,7 +211,7 @@ namespace GMS
                     return;
                 }
                 int id = int.Parse(dgvItemInfo.Rows[e.RowIndex].Cells["dgvItemId"].Value.ToString());
-                string query3 = "select * from ManageItem where ItemId=" + id;
+                string query3 = "select * from itemsdb where ItemId=" + id;
 
                 var result3 = DbHelper.GetQueryData(query3);
                 if (result3.HasError)
@@ -223,7 +223,7 @@ namespace GMS
                 DataTable dt = result3.Data;
 
                 txtItemId.Text = dt.Rows[0]["ItemId"].ToString();
-                txtItemName.Text = dt.Rows[0]["name"].ToString();
+                txtItemName.Text = dt.Rows[0]["itemName"].ToString();
                 if (dt.Rows[0]["category"].ToString() =="A")
                 {
                     rbtA.Checked = true;
@@ -236,7 +236,7 @@ namespace GMS
                 {
                     rbtC.Checked = true;
                 }
-                txtQuantityInStock.Text = dt.Rows[0]["qtnlnStock"].ToString();
+                txtQuantityInStock.Text = dt.Rows[0]["qtyInStock"].ToString();
                 txtPrice.Text= dt.Rows[0]["price"].ToString();
             }
             catch (Exception ex)
@@ -248,6 +248,16 @@ namespace GMS
             }
 
         private void dgvItemInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtItemId_TextChanged(object sender, EventArgs e)
         {
 
         }
