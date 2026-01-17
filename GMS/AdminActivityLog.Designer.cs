@@ -1,4 +1,6 @@
-﻿namespace GMS
+﻿using System;
+
+namespace GMS
 {
     partial class AdminActivityLog
     {
@@ -66,6 +68,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

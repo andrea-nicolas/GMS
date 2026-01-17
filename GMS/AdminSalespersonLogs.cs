@@ -33,10 +33,15 @@ namespace GMS
         {
             LoadLogs();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         private void AdminSalespersonLogs_Load(object sender, EventArgs e)
         {
             LoadLogs();
         }
+
     }
 }

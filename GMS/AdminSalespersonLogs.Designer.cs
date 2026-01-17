@@ -1,4 +1,6 @@
-﻿namespace GMS
+﻿using System;
+
+namespace GMS
 {
     partial class AdminSalespersonLogs
     {
@@ -67,6 +69,8 @@
             this.ResumeLayout(false);
 
         }
+
+        
 
         #endregion
 
