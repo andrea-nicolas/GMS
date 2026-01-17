@@ -17,7 +17,7 @@ namespace GMS
         {
             InitializeComponent();
             userID = currentUser;
-            TBAssingedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
+            TBAssignedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
