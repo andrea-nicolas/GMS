@@ -13,7 +13,7 @@ namespace GMS
 {
     public class SQL
     {
-        static SqlConnection con = new SqlConnection("Data Source=SUMAIYA\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
+        static SqlConnection con = new SqlConnection("Data Source=ANDREA-PC\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
 
         public static void connect()
         {
@@ -83,6 +83,7 @@ namespace GMS
         {
             connect();
             SqlCommand cmd = new SqlCommand("SELECT * FROM usersdb WHERE username = '" + username + "' AND password = '" + password + "'", con);
+            connect();
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read())
@@ -141,6 +142,69 @@ namespace GMS
                 return 0;
             }
         }
+
+        public static string getCartTotal(short cartID)
+        {
+            connect();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM saleslogDB WHERE cartID = " + cartID, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string result = reader["salesTotal"].ToString();
+                disconnect();
+                return result;
+            }
+            else
+            {
+                disconnect();
+                return null;
+            }
+        }
+        public static string getCartDiscountID(short cartID)
+        {
+            connect();
+
+            SqlCommand cmd = new SqlCommand("SELECT discountID FROM cartsdb WHERE cartID = @cartID", con);
+            cmd.Parameters.AddWithValue("@cartID", cartID);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                if (reader["discountID"] == DBNull.Value)
+                {
+                    reader.Close();
+                    disconnect();
+                    return "0";
+                }
+
+                string discountID = reader["discountID"].ToString();
+                reader.Close();
+                disconnect();
+                return getDiscountAmount(discountID);
+            }
+
+            reader.Close();
+            disconnect();
+            return "0";
+        }
+
+        public static string getDiscountAmount(string discountID)
+        {
+            if (string.IsNullOrWhiteSpace(discountID))
+                return "0";
+
+            connect();
+            SqlCommand cmd = new SqlCommand(
+                "SELECT discountPercent FROM discountdb WHERE discountID = @id", con);
+            cmd.Parameters.AddWithValue("@id", discountID);
+
+            object result = cmd.ExecuteScalar();
+            disconnect();
+
+            return result == null ? "0" : result.ToString();
+        }
+
 
         public static bool checkUsernameExists(string username)
         {

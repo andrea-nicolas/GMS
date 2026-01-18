@@ -64,7 +64,7 @@ namespace GMS
                 loginpg.Show(); 
                 this.Hide();
             }
-            else
+            else if ( SQL.getUserDetail("Role", userID) == "salesperson")
             {
                 SPDashboard spdashboard = new SPDashboard(userID);
                 spdashboard.Show();

@@ -43,9 +43,18 @@ namespace GMS
 
         private void BTCancel_Click(object sender, EventArgs e)
         {
-            SPDashboard sPDashboardpg = new SPDashboard(userID);
-            sPDashboardpg.Show();
-            this.Hide();
+            if ( SQL.getUserDetail("role", userID) == "salesperson")
+            {
+                SPDashboard sPDashboardpg = new SPDashboard(userID);
+                sPDashboardpg.Show();
+                this.Hide();
+            }
+            else if ( SQL.getUserDetail("role", userID) == "admin")
+            {
+                AdminDashboard managerDashboardpg = new AdminDashboard(userID);
+                managerDashboardpg.Show();
+                this.Hide();
+            }
         }
 
         private void TBUsername_TextChanged(object sender, EventArgs e)
