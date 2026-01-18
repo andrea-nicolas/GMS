@@ -217,6 +217,12 @@
     <Compile Include="AdminSalespersonLogs.Designer.cs">
       <DependentUpon>AdminSalespersonLogs.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSalesReport.Designer.cs">
+      <DependentUpon>AdminSalesReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="GMSDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -361,6 +377,9 @@
     <EmbeddedResource Include="AdminSalespersonLogs.resx">
       <DependentUpon>AdminSalespersonLogs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminSalesReport.resx">
+      <DependentUpon>AdminSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUserList.resx">
       <DependentUpon>AdminUserList.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +446,28 @@
     </None>
     <None Include="GMSDataSet1.xss">
       <DependentUpon>GMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet10.xsc">
+      <DependentUpon>GMSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet10.xss">
+      <DependentUpon>GMSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet11.xsc">
+      <DependentUpon>GMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet11.xss">
+      <DependentUpon>GMSDataSet11.xsd</DependentUpon>
     </None>
     <None Include="GMSDataSet2.xsc">
       <DependentUpon>GMSDataSet2.xsd</DependentUpon>
