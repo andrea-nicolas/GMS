@@ -13,7 +13,7 @@ namespace GMS
 {
     public class SQL
     {
-        static SqlConnection con = new SqlConnection("Data Source=SUMAIYA\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
+        static SqlConnection con = new SqlConnection("Data Source=ANDREA-PC\\SQLEXPRESS;Initial Catalog=GMS;Integrated Security=True;");
 
         public static void connect()
         {
@@ -83,6 +83,7 @@ namespace GMS
         {
             connect();
             SqlCommand cmd = new SqlCommand("SELECT * FROM usersdb WHERE username = '" + username + "' AND password = '" + password + "'", con);
+            connect();
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read())

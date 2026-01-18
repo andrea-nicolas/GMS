@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace GMS
 {
@@ -19,29 +17,32 @@ namespace GMS
             InitializeComponent();
         }
 
-        private void loadItemInforComm(string SearchValue="")
+        private void loadItemInforComm(string SearchValue = "")
         {
             try
             {
-                string query = @"SELECT ItemId, name, category, price, qtnlnStock
-               FROM ManageItem";
+                string query = @"SELECT itemID, itemName, category, price, qtyInStock
+                                 FROM itemsDB";
 
                 if (!string.IsNullOrEmpty(SearchValue))
                 {
                     int id;
-                    if(int.TryParse(SearchValue, out id))
+                    if (int.TryParse(SearchValue, out id))
                     {
-                        query += " where ItemId=" + id + "Or Name LIKE'%" + SearchValue + "%'";
+                        query += " WHERE itemID=" + id + " OR itemName LIKE '%" + SearchValue + "%'";
                     }
                     else
                     {
-                        query += "where name LIKE'%'";
+                        query += " WHERE itemName LIKE '%" + SearchValue + "%'";
                     }
                 }
+
                 var result = DbHelper.GetQueryData(query);
+
                 if (result.HasError)
                 {
                     MessageBox.Show(result.Message);
+                    return;
                 }
 
                 dgvItemInfo.DataSource = result.Data;
@@ -49,11 +50,10 @@ namespace GMS
                 dgvItemInfo.ClearSelection();
 
                 this.refreshComm();
-
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -64,19 +64,7 @@ namespace GMS
             txtPrice.Text = "";
             txtQuantityInStock.Text = "";
             txtSearch.Text = "";
-            rbtA.Checked = false;
-            rbtB.Checked = false;
-            rbtC.Checked = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.loadItemInforComm(txtSearch.Text);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            cmbCategory.SelectedIndex = -1;
         }
 
         private void Item_Load(object sender, EventArgs e)
@@ -90,113 +78,136 @@ namespace GMS
             this.loadItemInforComm();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.loadItemInforComm(txtSearch.Text);
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             try
             {
                 string ItemName = txtItemName.Text;
-                string ItemCategory = rbtA.Checked ? rbtA.Text : rbtB.Checked ? rbtB.Text : rbtC.Checked ? rbtC.Text : "";
-                int Price = int.Parse(txtPrice.Text);
-                int quantityInStock = int.Parse(txtQuantityInStock.Text);
+
+                string ItemCategory = cmbCategory.SelectedItem == null ?
+                                      "" : cmbCategory.SelectedItem.ToString();
 
                 if (string.IsNullOrEmpty(ItemName))
                 {
                     MessageBox.Show("Enter Name");
                     return;
                 }
+
                 if (string.IsNullOrEmpty(ItemCategory))
                 {
-                    MessageBox.Show(" Select Item Category");
+                    MessageBox.Show("Select Item Category");
                     return;
                 }
+
                 if (string.IsNullOrEmpty(txtPrice.Text))
                 {
                     MessageBox.Show("Enter Price");
                     return;
                 }
-                if (string.IsNullOrEmpty(quantityInStock.ToString()))
+
+                if (string.IsNullOrEmpty(txtQuantityInStock.Text))
                 {
                     MessageBox.Show("Enter Quantity");
                     return;
                 }
 
+                int Price, quantityInStock;
+
+                if (!int.TryParse(txtPrice.Text, out Price))
+                {
+                    MessageBox.Show("Price must be numeric");
+                    return;
+                }
+
+                if (!int.TryParse(txtQuantityInStock.Text, out quantityInStock))
+                {
+                    MessageBox.Show("Quantity must be numeric");
+                    return;
+                }
+
                 if (txtItemId.Text == "Auto Generate")
                 {
-                    string query = "INSERT INTO ManageItem (name, category, price, qtnlnStock) " +
-               "VALUES ('" + ItemName + "','" +
-               ItemCategory + "'," +
-               Price + "," +
-               quantityInStock + ")";
-
+                    string query = "INSERT INTO itemsDB (itemName, category, price, qtyInStock) " +
+                                   "VALUES ('" + ItemName + "','" +
+                                   ItemCategory + "'," +
+                                   Price + "," +
+                                   quantityInStock + ")";
 
                     var result = DbHelper.ExecutableNonResultQuery(query);
+
                     if (result.HasError)
                     {
                         MessageBox.Show(result.Message);
                         return;
                     }
-                    MessageBox.Show("Saved"); 
-                }
 
-                 else
+                    MessageBox.Show("Saved Successfully");
+
+                    loadItemInforComm();
+                    refreshComm();
+                }
+                else
                 {
-                    string query = "UPDATE ManageItem SET " +
-                "name = '" + ItemName + "', " +
-                "category = '" + ItemCategory + "', " +
-                "price = " + Price + ", " +
-                "qtnlnStock = " + quantityInStock + " " +
-                "WHERE ItemId = " + txtItemId.Text;
+                    string query = "UPDATE itemsDB SET " +
+                                   "itemName = '" + ItemName + "', " +
+                                   "category = '" + ItemCategory + "', " +
+                                   "price = " + Price + ", " +
+                                   "qtyInStock = " + quantityInStock + " " +
+                                   "WHERE itemID = " + txtItemId.Text;
 
                     var result = DbHelper.ExecutableNonResultQuery(query);
+
                     if (result.HasError)
                     {
                         MessageBox.Show(result.Message);
                         return;
                     }
 
-                    MessageBox.Show("Updated");
+                    MessageBox.Show("Updated Successfully");
 
-
-
+                    loadItemInforComm();
+                    refreshComm();
                 }
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                if(txtItemId.Text=="Auto Generate")
+                if (txtItemId.Text == "Auto Generate")
                 {
-                    MessageBox.Show("Select Row");
-                    return; 
-
+                    MessageBox.Show("Select Row First");
+                    return;
                 }
-                string query = "delete from ManageItem where ItemId=" + txtItemId.Text;
+
+                string query = "DELETE FROM itemsDB WHERE itemID=" + txtItemId.Text;
+
                 var result = DbHelper.ExecutableNonResultQuery(query);
+
                 if (result.HasError)
                 {
                     MessageBox.Show(result.Message);
                     return;
                 }
-                MessageBox.Show("Deleted");
 
-                this.loadItemInforComm();  
+                MessageBox.Show("Deleted Successfully");
+
+                this.loadItemInforComm();
                 this.refreshComm();
             }
-
-            catch(Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
-                return;
             }
         }
 
@@ -205,52 +216,37 @@ namespace GMS
             try
             {
                 this.refreshComm();
+
                 if (e.RowIndex < 0)
                 {
                     dgvItemInfo.ClearSelection();
                     return;
                 }
+
                 int id = int.Parse(dgvItemInfo.Rows[e.RowIndex].Cells["dgvItemId"].Value.ToString());
-                string query3 = "select * from ManageItem where ItemId=" + id;
+
+                string query3 = "SELECT * FROM itemsDB WHERE itemID=" + id;
 
                 var result3 = DbHelper.GetQueryData(query3);
+
                 if (result3.HasError)
                 {
                     MessageBox.Show(result3.Message);
                     return;
                 }
-                
+
                 DataTable dt = result3.Data;
 
-                txtItemId.Text = dt.Rows[0]["ItemId"].ToString();
-                txtItemName.Text = dt.Rows[0]["name"].ToString();
-                if (dt.Rows[0]["category"].ToString() =="A")
-                {
-                    rbtA.Checked = true;
-                }
-                if (dt.Rows[0]["category"].ToString() == "B")
-                {
-                    rbtB.Checked = true;
-                }
-                if (dt.Rows[0]["category"].ToString() == "C")
-                {
-                    rbtC.Checked = true;
-                }
-                txtQuantityInStock.Text = dt.Rows[0]["qtnlnStock"].ToString();
-                txtPrice.Text= dt.Rows[0]["price"].ToString();
+                txtItemId.Text = dt.Rows[0]["itemID"].ToString();
+                txtItemName.Text = dt.Rows[0]["itemName"].ToString();
+                cmbCategory.SelectedItem = dt.Rows[0]["category"].ToString();
+                txtQuantityInStock.Text = dt.Rows[0]["qtyInStock"].ToString();
+                txtPrice.Text = dt.Rows[0]["price"].ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-            }
-
-        private void dgvItemInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
-

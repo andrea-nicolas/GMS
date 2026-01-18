@@ -39,14 +39,11 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.dgvItemInfo = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.txtQuantityInStock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rbtC = new System.Windows.Forms.RadioButton();
-            this.rbtB = new System.Windows.Forms.RadioButton();
-            this.rbtA = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +59,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemInfo)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -187,16 +183,15 @@
             this.dgvItemInfo.RowTemplate.Height = 24;
             this.dgvItemInfo.Size = new System.Drawing.Size(661, 526);
             this.dgvItemInfo.TabIndex = 2;
-            this.dgvItemInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemInfo_CellContentClick);
             this.dgvItemInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemInfo_CellDoubleClick);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.cmbCategory);
             this.panel3.Controls.Add(this.txtQuantityInStock);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtItemName);
             this.panel3.Controls.Add(this.label2);
@@ -207,6 +202,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(661, 526);
             this.panel3.TabIndex = 3;
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Items.AddRange(new object[] {
+            "Drinks",
+            "Meats",
+            "Fruits",
+            "Toiletries",
+            "Food",
+            "Vegetables"});
+            this.cmbCategory.Location = new System.Drawing.Point(185, 224);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(357, 24);
+            this.cmbCategory.TabIndex = 10;
             // 
             // txtQuantityInStock
             // 
@@ -243,52 +253,6 @@
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Price:";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.rbtC);
-            this.panel4.Controls.Add(this.rbtB);
-            this.panel4.Controls.Add(this.rbtA);
-            this.panel4.Location = new System.Drawing.Point(187, 224);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(356, 36);
-            this.panel4.TabIndex = 5;
-            // 
-            // rbtC
-            // 
-            this.rbtC.AutoSize = true;
-            this.rbtC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtC.Location = new System.Drawing.Point(311, 6);
-            this.rbtC.Name = "rbtC";
-            this.rbtC.Size = new System.Drawing.Size(43, 24);
-            this.rbtC.TabIndex = 2;
-            this.rbtC.TabStop = true;
-            this.rbtC.Text = "C";
-            this.rbtC.UseVisualStyleBackColor = true;
-            // 
-            // rbtB
-            // 
-            this.rbtB.AutoSize = true;
-            this.rbtB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtB.Location = new System.Drawing.Point(157, 6);
-            this.rbtB.Name = "rbtB";
-            this.rbtB.Size = new System.Drawing.Size(43, 24);
-            this.rbtB.TabIndex = 1;
-            this.rbtB.TabStop = true;
-            this.rbtB.Text = "B";
-            this.rbtB.UseVisualStyleBackColor = true;
-            // 
-            // rbtA
-            // 
-            this.rbtA.AutoSize = true;
-            this.rbtA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtA.Location = new System.Drawing.Point(3, 4);
-            this.rbtA.Name = "rbtA";
-            this.rbtA.Size = new System.Drawing.Size(42, 24);
-            this.rbtA.TabIndex = 0;
-            this.rbtA.TabStop = true;
-            this.rbtA.Text = "A";
-            this.rbtA.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -335,7 +299,6 @@
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Item ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvItemId
             // 
@@ -347,7 +310,7 @@
             // 
             // dgvItemName
             // 
-            this.dgvItemName.DataPropertyName = "name";
+            this.dgvItemName.DataPropertyName = "itemName";
             this.dgvItemName.HeaderText = "Item Name";
             this.dgvItemName.MinimumWidth = 6;
             this.dgvItemName.Name = "dgvItemName";
@@ -393,8 +356,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemInfo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -417,14 +378,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton rbtC;
-        private System.Windows.Forms.RadioButton rbtB;
-        private System.Windows.Forms.RadioButton rbtA;
         private System.Windows.Forms.TextBox txtQuantityInStock;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvItemId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCategory;

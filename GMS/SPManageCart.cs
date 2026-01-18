@@ -18,7 +18,6 @@ namespace GMS
         float cartTotalAfterDiscount = 0;
         float cartTotalAfterVAT = 0;
 
-
         public SPManageCart(short currentUser, short currentCart)
         {
             InitializeComponent();
@@ -29,12 +28,18 @@ namespace GMS
             TBLcartItems.DataSource = SQL.getTableData("cartItemsdb", " WHERE cartID = " + cartID);
             TBCartTotalPrice.Text = SQL.getCartTotal(cartID);
 
-            cartTotalAfterDiscount = Convert.ToSingle(SQL.getCartTotal(cartID)) * (Convert.ToSingle(SQL.getCartDiscountID(cartID)) / 100 );
-            TBtotalAfterDisc.Text = cartTotalAfterDiscount.ToString();
+            if (SQL.getCartDiscountID(cartID) == "0")
+            {
+                TBtotalAfterDisc.Text = TBCartTotalPrice.Text;
+            }
+            else
+            {
+                cartTotalAfterDiscount = Convert.ToSingle(SQL.getCartTotal(cartID)) * (Convert.ToSingle(SQL.getCartDiscountID(cartID)) / 100);
+                TBtotalAfterDisc.Text = cartTotalAfterDiscount.ToString();
+            }              
 
             cartTotalAfterVAT = cartTotalAfterDiscount * 0.1f;
             TBtotalAfterVAT.Text = cartTotalAfterVAT.ToString();
-
         }
 
         private void SPManageCart_Load(object sender, EventArgs e)
@@ -91,18 +96,26 @@ namespace GMS
                     SQL.execute("UPDATE salesLogdb SET salesTotal = " + cartTotalPrice + " WHERE cartID = " + cartID);
 
                 }
-                catch (Exception ex)
+                catch 
                 {
                     MessageBox.Show("Item is already in cart! ");
                 }
                 SQL.execute("UPDATE itemsdb SET qtyInStock = qtyInStock - " + NUDqty.Value + " WHERE itemID = " + TBitemID.Text);
                 TBLcartItems.DataSource = SQL.getTableData("cartItemsdb", " WHERE cartID = " + cartID);
                 TBCartTotalPrice.Text = cartTotalPrice.ToString();
-                cartTotalAfterDiscount = Convert.ToSingle(SQL.getCartTotal(cartID)) * (Convert.ToSingle(SQL.getCartDiscountID(cartID)) / 100);
-                TBtotalAfterDisc.Text = cartTotalAfterDiscount.ToString();
+                if (SQL.getCartDiscountID(cartID) == "0")
+                {
+                    TBtotalAfterDisc.Text = TBCartTotalPrice.Text;
+                }
+                else
+                {
+                    cartTotalAfterDiscount = Convert.ToSingle(SQL.getCartTotal(cartID)) * (Convert.ToSingle(SQL.getCartDiscountID(cartID)) / 100);
+                    TBtotalAfterDisc.Text = cartTotalAfterDiscount.ToString();
+                }
 
                 cartTotalAfterVAT = cartTotalAfterDiscount * 0.1f;
                 TBtotalAfterVAT.Text = cartTotalAfterVAT.ToString();
+
                 TBitemID.Text = "";
                 TBname.Text = "";
                 CBcategory.Text = "";
@@ -192,13 +205,26 @@ namespace GMS
                     int quantity = (int)NUDqty.Value;
 
                     SQL.execute("DELETE FROM cartItemsdb WHERE cartID = " + cartID + " AND itemID = " + TBitemID.Text);
+                    
                     SQL.execute("UPDATE itemsdb SET qtyInStock = qtyInStock + " + quantity + " WHERE itemID = " + TBitemID.Text);
                     cartTotalPrice -= Convert.ToSingle(TBtotalPrice.Text);
+                    if (cartTotalPrice < 0)
+                    {
+                        cartTotalPrice *= -1;
+                    }
+                    SQL.execute("UPDATE salesLogdb SET salesTotal = " + cartTotalPrice + " WHERE cartID = " + cartID);
                     TBLcartItems.DataSource = SQL.getTableData("cartItemsdb", " WHERE cartID = " + cartID);
                     TBCartTotalPrice.Text = cartTotalPrice.ToString();
 
-                    cartTotalAfterDiscount = Convert.ToSingle(SQL.getCartTotal(cartID)) * (Convert.ToSingle(SQL.getCartDiscountID(cartID)) / 100);
-                    TBtotalAfterDisc.Text = cartTotalAfterDiscount.ToString();
+                    if (SQL.getCartDiscountID(cartID) == "0")
+                    {
+                        TBtotalAfterDisc.Text = TBCartTotalPrice.Text;
+                    }
+                    else
+                    {
+                        cartTotalAfterDiscount = Convert.ToSingle(SQL.getCartTotal(cartID)) * (Convert.ToSingle(SQL.getCartDiscountID(cartID)) / 100);
+                        TBtotalAfterDisc.Text = cartTotalAfterDiscount.ToString();
+                    }
 
                     cartTotalAfterVAT = cartTotalAfterDiscount * 0.1f;
                     TBtotalAfterVAT.Text = cartTotalAfterVAT.ToString();
@@ -242,6 +268,11 @@ namespace GMS
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBtotalAfterVAT_TextChanged(object sender, EventArgs e)
         {
 
         }

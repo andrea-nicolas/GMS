@@ -274,6 +274,7 @@
             this.TBtotalAfterVAT.ReadOnly = true;
             this.TBtotalAfterVAT.Size = new System.Drawing.Size(100, 20);
             this.TBtotalAfterVAT.TabIndex = 73;
+            this.TBtotalAfterVAT.TextChanged += new System.EventHandler(this.TBtotalAfterVAT_TextChanged);
             // 
             // TBtotalPrice
             // 
