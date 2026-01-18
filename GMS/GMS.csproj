@@ -245,6 +245,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GMSDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GMSDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMSDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +339,21 @@
     <Compile Include="SQL.cs" />
     <EmbeddedResource Include="AdminActivityLog.resx">
       <DependentUpon>AdminActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminApprovals.resx">
+      <DependentUpon>AdminApprovals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEmployeesCrud.resx">
+      <DependentUpon>AdminEmployeesCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminItemsCrud.resx">
+      <DependentUpon>AdminItemsCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagersCrud.resx">
+      <DependentUpon>AdminManagersCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSalespersonLogs.resx">
+      <DependentUpon>AdminSalespersonLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserList.resx">
       <DependentUpon>AdminUserList.cs</DependentUpon>
@@ -363,6 +418,94 @@
     </None>
     <None Include="GMSDataSet1.xss">
       <DependentUpon>GMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet2.xsc">
+      <DependentUpon>GMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet2.xss">
+      <DependentUpon>GMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet3.xsc">
+      <DependentUpon>GMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet3.xss">
+      <DependentUpon>GMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet4.xsc">
+      <DependentUpon>GMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet4.xss">
+      <DependentUpon>GMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet5.xsc">
+      <DependentUpon>GMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet5.xss">
+      <DependentUpon>GMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet6.xsc">
+      <DependentUpon>GMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet6.xss">
+      <DependentUpon>GMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet7.xsc">
+      <DependentUpon>GMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet7.xss">
+      <DependentUpon>GMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet8.xsc">
+      <DependentUpon>GMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet8.xss">
+      <DependentUpon>GMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet9.xsc">
+      <DependentUpon>GMSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="GMSDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMSDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GMSDataSet9.xss">
+      <DependentUpon>GMSDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

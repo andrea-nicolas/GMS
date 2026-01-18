@@ -30,6 +30,7 @@ namespace GMS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,12 +52,45 @@ namespace GMS
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.gMSDataSet4 = new GMS.GMSDataSet4();
+            this.cartsDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cartsDBTableAdapter = new GMS.GMSDataSet4TableAdapters.cartsDBTableAdapter();
+            this.gMSDataSet5 = new GMS.GMSDataSet5();
+            this.usersDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersDBTableAdapter = new GMS.GMSDataSet5TableAdapters.usersDBTableAdapter();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.securityAnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignedCounterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartsDBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userIDDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.phoneNoDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.roleDataGridViewTextBoxColumn,
+            this.securityAnswerDataGridViewTextBoxColumn,
+            this.assignedCounterDataGridViewTextBoxColumn,
+            this.accountStatusDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.usersDBBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(26, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -241,6 +275,115 @@ namespace GMS
             this.comboBox1.Size = new System.Drawing.Size(100, 24);
             this.comboBox1.TabIndex = 23;
             // 
+            // gMSDataSet4
+            // 
+            this.gMSDataSet4.DataSetName = "GMSDataSet4";
+            this.gMSDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cartsDBBindingSource
+            // 
+            this.cartsDBBindingSource.DataMember = "cartsDB";
+            this.cartsDBBindingSource.DataSource = this.gMSDataSet4;
+            // 
+            // cartsDBTableAdapter
+            // 
+            this.cartsDBTableAdapter.ClearBeforeFill = true;
+            // 
+            // gMSDataSet5
+            // 
+            this.gMSDataSet5.DataSetName = "GMSDataSet5";
+            this.gMSDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersDBBindingSource
+            // 
+            this.usersDBBindingSource.DataMember = "usersDB";
+            this.usersDBBindingSource.DataSource = this.gMSDataSet5;
+            // 
+            // usersDBTableAdapter
+            // 
+            this.usersDBTableAdapter.ClearBeforeFill = true;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNoDataGridViewTextBoxColumn
+            // 
+            this.phoneNoDataGridViewTextBoxColumn.DataPropertyName = "phoneNo";
+            this.phoneNoDataGridViewTextBoxColumn.HeaderText = "phoneNo";
+            this.phoneNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNoDataGridViewTextBoxColumn.Name = "phoneNoDataGridViewTextBoxColumn";
+            this.phoneNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "role";
+            this.roleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // securityAnswerDataGridViewTextBoxColumn
+            // 
+            this.securityAnswerDataGridViewTextBoxColumn.DataPropertyName = "securityAnswer";
+            this.securityAnswerDataGridViewTextBoxColumn.HeaderText = "securityAnswer";
+            this.securityAnswerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.securityAnswerDataGridViewTextBoxColumn.Name = "securityAnswerDataGridViewTextBoxColumn";
+            this.securityAnswerDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // assignedCounterDataGridViewTextBoxColumn
+            // 
+            this.assignedCounterDataGridViewTextBoxColumn.DataPropertyName = "assignedCounter";
+            this.assignedCounterDataGridViewTextBoxColumn.HeaderText = "assignedCounter";
+            this.assignedCounterDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.assignedCounterDataGridViewTextBoxColumn.Name = "assignedCounterDataGridViewTextBoxColumn";
+            this.assignedCounterDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // accountStatusDataGridViewTextBoxColumn
+            // 
+            this.accountStatusDataGridViewTextBoxColumn.DataPropertyName = "accountStatus";
+            this.accountStatusDataGridViewTextBoxColumn.HeaderText = "accountStatus";
+            this.accountStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.accountStatusDataGridViewTextBoxColumn.Name = "accountStatusDataGridViewTextBoxColumn";
+            this.accountStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
             // AdminEmployeesCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,6 +414,10 @@ namespace GMS
             this.Text = "AdminEmployeesCrud";
             this.Load += new System.EventHandler(this.AdminEmployeesCrud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartsDBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +456,21 @@ namespace GMS
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ComboBox comboBox1;
+        private GMSDataSet4 gMSDataSet4;
+        private System.Windows.Forms.BindingSource cartsDBBindingSource;
+        private GMSDataSet4TableAdapters.cartsDBTableAdapter cartsDBTableAdapter;
+        private GMSDataSet5 gMSDataSet5;
+        private System.Windows.Forms.BindingSource usersDBBindingSource;
+        private GMSDataSet5TableAdapters.usersDBTableAdapter usersDBTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn securityAnswerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignedCounterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accountStatusDataGridViewTextBoxColumn;
     }
 }

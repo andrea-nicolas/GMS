@@ -30,14 +30,33 @@ namespace GMS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.gMSDataSet9 = new GMS.GMSDataSet9();
+            this.salesLogDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesLogDBTableAdapter = new GMS.GMSDataSet9TableAdapters.salesLogDBTableAdapter();
+            this.salesLogIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cartIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soldByUserIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesLogDBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.salesLogIDDataGridViewTextBoxColumn,
+            this.cartIDDataGridViewTextBoxColumn,
+            this.soldByUserIDDataGridViewTextBoxColumn,
+            this.salesDTDataGridViewTextBoxColumn,
+            this.salesTotalDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.salesLogDBBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(23, 38);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -55,6 +74,61 @@ namespace GMS
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // gMSDataSet9
+            // 
+            this.gMSDataSet9.DataSetName = "GMSDataSet9";
+            this.gMSDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // salesLogDBBindingSource
+            // 
+            this.salesLogDBBindingSource.DataMember = "salesLogDB";
+            this.salesLogDBBindingSource.DataSource = this.gMSDataSet9;
+            // 
+            // salesLogDBTableAdapter
+            // 
+            this.salesLogDBTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesLogIDDataGridViewTextBoxColumn
+            // 
+            this.salesLogIDDataGridViewTextBoxColumn.DataPropertyName = "salesLogID";
+            this.salesLogIDDataGridViewTextBoxColumn.HeaderText = "salesLogID";
+            this.salesLogIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.salesLogIDDataGridViewTextBoxColumn.Name = "salesLogIDDataGridViewTextBoxColumn";
+            this.salesLogIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesLogIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cartIDDataGridViewTextBoxColumn
+            // 
+            this.cartIDDataGridViewTextBoxColumn.DataPropertyName = "cartID";
+            this.cartIDDataGridViewTextBoxColumn.HeaderText = "cartID";
+            this.cartIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cartIDDataGridViewTextBoxColumn.Name = "cartIDDataGridViewTextBoxColumn";
+            this.cartIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // soldByUserIDDataGridViewTextBoxColumn
+            // 
+            this.soldByUserIDDataGridViewTextBoxColumn.DataPropertyName = "soldByUserID";
+            this.soldByUserIDDataGridViewTextBoxColumn.HeaderText = "soldByUserID";
+            this.soldByUserIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soldByUserIDDataGridViewTextBoxColumn.Name = "soldByUserIDDataGridViewTextBoxColumn";
+            this.soldByUserIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // salesDTDataGridViewTextBoxColumn
+            // 
+            this.salesDTDataGridViewTextBoxColumn.DataPropertyName = "salesDT";
+            this.salesDTDataGridViewTextBoxColumn.HeaderText = "salesDT";
+            this.salesDTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.salesDTDataGridViewTextBoxColumn.Name = "salesDTDataGridViewTextBoxColumn";
+            this.salesDTDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // salesTotalDataGridViewTextBoxColumn
+            // 
+            this.salesTotalDataGridViewTextBoxColumn.DataPropertyName = "salesTotal";
+            this.salesTotalDataGridViewTextBoxColumn.HeaderText = "salesTotal";
+            this.salesTotalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.salesTotalDataGridViewTextBoxColumn.Name = "salesTotalDataGridViewTextBoxColumn";
+            this.salesTotalDataGridViewTextBoxColumn.Width = 125;
+            // 
             // AdminSalespersonLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -66,6 +140,8 @@ namespace GMS
             this.Text = "AdminSalespersonLogs";
             this.Load += new System.EventHandler(this.AdminSalespersonLogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesLogDBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,5 +152,13 @@ namespace GMS
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private GMSDataSet9 gMSDataSet9;
+        private System.Windows.Forms.BindingSource salesLogDBBindingSource;
+        private GMSDataSet9TableAdapters.salesLogDBTableAdapter salesLogDBTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesLogIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cartIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soldByUserIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesDTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesTotalDataGridViewTextBoxColumn;
     }
 }
