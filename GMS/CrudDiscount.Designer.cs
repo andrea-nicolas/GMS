@@ -53,19 +53,21 @@
             // 
             // txtDiscountPercentage
             // 
-            this.txtDiscountPercentage.Location = new System.Drawing.Point(229, 147);
+            this.txtDiscountPercentage.Location = new System.Drawing.Point(172, 119);
+            this.txtDiscountPercentage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDiscountPercentage.Multiline = true;
             this.txtDiscountPercentage.Name = "txtDiscountPercentage";
-            this.txtDiscountPercentage.Size = new System.Drawing.Size(357, 39);
+            this.txtDiscountPercentage.Size = new System.Drawing.Size(269, 32);
             this.txtDiscountPercentage.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 156);
+            this.label2.Location = new System.Drawing.Point(6, 127);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 20);
+            this.label2.Size = new System.Drawing.Size(169, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = " Discount Percentage:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -74,9 +76,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 95);
+            this.label1.Location = new System.Drawing.Point(68, 77);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Discount ID:";
             // 
@@ -84,9 +87,10 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(77, 9);
+            this.btnSave.Location = new System.Drawing.Point(58, 7);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 39);
+            this.btnSave.Size = new System.Drawing.Size(70, 32);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -96,9 +100,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(463, 9);
+            this.btnDelete.Location = new System.Drawing.Point(347, 7);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(93, 39);
+            this.btnDelete.Size = new System.Drawing.Size(70, 32);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -110,26 +115,29 @@
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(670, 3);
+            this.panel2.Location = new System.Drawing.Point(502, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(661, 54);
+            this.panel2.Size = new System.Drawing.Size(496, 45);
             this.panel2.TabIndex = 1;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(259, 6);
+            this.txtSearch.Location = new System.Drawing.Point(194, 5);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(399, 45);
+            this.txtSearch.Size = new System.Drawing.Size(300, 37);
             this.txtSearch.TabIndex = 2;
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(117, 9);
+            this.btnRefresh.Location = new System.Drawing.Point(88, 7);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(99, 39);
+            this.btnRefresh.Size = new System.Drawing.Size(74, 32);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -139,9 +147,10 @@
             // 
             this.btnSearch.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(9, 9);
+            this.btnSearch.Location = new System.Drawing.Point(7, 7);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(93, 39);
+            this.btnSearch.Size = new System.Drawing.Size(70, 32);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -154,9 +163,10 @@
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(661, 54);
+            this.panel1.Size = new System.Drawing.Size(496, 45);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -168,12 +178,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgvCrudDiscount, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-14, -3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-10, -2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1334, 592);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 481);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // dgvCrudDiscount
@@ -183,11 +194,12 @@
             this.dgvDiscountID,
             this.dgvDiscountPercentage});
             this.dgvCrudDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCrudDiscount.Location = new System.Drawing.Point(3, 63);
+            this.dgvCrudDiscount.Location = new System.Drawing.Point(2, 51);
+            this.dgvCrudDiscount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCrudDiscount.Name = "dgvCrudDiscount";
             this.dgvCrudDiscount.RowHeadersWidth = 51;
             this.dgvCrudDiscount.RowTemplate.Height = 24;
-            this.dgvCrudDiscount.Size = new System.Drawing.Size(661, 526);
+            this.dgvCrudDiscount.Size = new System.Drawing.Size(496, 428);
             this.dgvCrudDiscount.TabIndex = 2;
             this.dgvCrudDiscount.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCrudDiscount_CellDoubleClick);
             // 
@@ -215,26 +227,30 @@
             this.panel3.Controls.Add(this.txtDiscountID);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(670, 63);
+            this.panel3.Location = new System.Drawing.Point(502, 51);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(661, 526);
+            this.panel3.Size = new System.Drawing.Size(496, 428);
             this.panel3.TabIndex = 3;
             // 
             // txtDiscountID
             // 
-            this.txtDiscountID.Location = new System.Drawing.Point(229, 85);
+            this.txtDiscountID.Location = new System.Drawing.Point(172, 69);
+            this.txtDiscountID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDiscountID.Multiline = true;
             this.txtDiscountID.Name = "txtDiscountID";
-            this.txtDiscountID.Size = new System.Drawing.Size(357, 43);
+            this.txtDiscountID.Size = new System.Drawing.Size(269, 36);
             this.txtDiscountID.TabIndex = 1;
             // 
             // CrudDiscount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 587);
+            this.ClientSize = new System.Drawing.Size(980, 477);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CrudDiscount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrudDiscount";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CrudDiscount_FormClosed);
             this.Load += new System.EventHandler(this.CrudDiscount_Load);

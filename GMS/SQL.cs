@@ -160,7 +160,7 @@ namespace GMS
                 return null;
             }
         }
-        public static string getCartDiscountID(short cartID)
+        public static float getCartDiscount(short cartID)
         {
             connect();
 
@@ -175,7 +175,7 @@ namespace GMS
                 {
                     reader.Close();
                     disconnect();
-                    return "0";
+                    return 0f;
                 }
 
                 string discountID = reader["discountID"].ToString();
@@ -186,23 +186,30 @@ namespace GMS
 
             reader.Close();
             disconnect();
-            return "0";
+            return 0f;
         }
 
-        public static string getDiscountAmount(string discountID)
+        public static float getDiscountAmount(string discountID)
         {
             if (string.IsNullOrWhiteSpace(discountID))
-                return "0";
+            {
+                return 0f;
+            }
 
             connect();
-            SqlCommand cmd = new SqlCommand(
-                "SELECT discountPercent FROM discountdb WHERE discountID = @id", con);
+            SqlCommand cmd = new SqlCommand("SELECT percentage FROM discountdb WHERE discountID = @id", con);
             cmd.Parameters.AddWithValue("@id", discountID);
-
             object result = cmd.ExecuteScalar();
             disconnect();
 
-            return result == null ? "0" : result.ToString();
+            if (result == null)
+            {
+                return 0f;
+            }
+            else
+            {
+                return Convert.ToSingle(result);
+            }
         }
 
 

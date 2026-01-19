@@ -117,7 +117,7 @@
             // 
             // TBdiscount
             // 
-            this.TBdiscount.Location = new System.Drawing.Point(292, 367);
+            this.TBdiscount.Location = new System.Drawing.Point(351, 367);
             this.TBdiscount.Name = "TBdiscount";
             this.TBdiscount.ReadOnly = true;
             this.TBdiscount.Size = new System.Drawing.Size(100, 20);
@@ -125,7 +125,7 @@
             // 
             // TBcartID
             // 
-            this.TBcartID.Location = new System.Drawing.Point(292, 335);
+            this.TBcartID.Location = new System.Drawing.Point(351, 335);
             this.TBcartID.Name = "TBcartID";
             this.TBcartID.ReadOnly = true;
             this.TBcartID.Size = new System.Drawing.Size(100, 20);
@@ -134,7 +134,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(182, 370);
+            this.label6.Location = new System.Drawing.Point(241, 370);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 13);
             this.label6.TabIndex = 47;
@@ -143,7 +143,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(243, 342);
+            this.label4.Location = new System.Drawing.Point(302, 342);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 45;
@@ -152,7 +152,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(168, 28);
+            this.label5.Location = new System.Drawing.Point(241, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 44;
@@ -161,9 +161,9 @@
             // TBLCarts
             // 
             this.TBLCarts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TBLCarts.Location = new System.Drawing.Point(171, 50);
+            this.TBLCarts.Location = new System.Drawing.Point(244, 47);
             this.TBLCarts.Name = "TBLCarts";
-            this.TBLCarts.Size = new System.Drawing.Size(580, 265);
+            this.TBLCarts.Size = new System.Drawing.Size(443, 265);
             this.TBLCarts.TabIndex = 43;
             this.TBLCarts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.TBLCarts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -221,6 +221,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "SPViewPendingCarts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SPViewPendingCarts";
             this.Load += new System.EventHandler(this.SPViewPendingCarts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TBLCarts)).EndInit();

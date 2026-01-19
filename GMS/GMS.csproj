@@ -229,6 +229,7 @@
     <Compile Include="AssignSellsperson.Designer.cs">
       <DependentUpon>AssignSellsperson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="CrudDiscount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +336,24 @@
     </Compile>
     <EmbeddedResource Include="AdminActivityLog.resx">
       <DependentUpon>AdminActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminApprovals.resx">
+      <DependentUpon>AdminApprovals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEmployeesCrud.resx">
+      <DependentUpon>AdminEmployeesCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminItemsCrud.resx">
+      <DependentUpon>AdminItemsCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagersCrud.resx">
+      <DependentUpon>AdminManagersCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSalespersonLogs.resx">
+      <DependentUpon>AdminSalespersonLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserList.resx">
       <DependentUpon>AdminUserList.cs</DependentUpon>

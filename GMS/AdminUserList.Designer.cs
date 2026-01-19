@@ -33,10 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gMSDataSet1 = new GMS.GMSDataSet1();
-            this.usersDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersDBTableAdapter = new GMS.GMSDataSet1TableAdapters.usersDBTableAdapter();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +43,13 @@
             this.securityAnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assignedCounterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gMSDataSet1 = new GMS.GMSDataSet1();
+            this.button1 = new System.Windows.Forms.Button();
+            this.usersDBTableAdapter = new GMS.GMSDataSet1TableAdapters.usersDBTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -84,7 +84,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 48);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -96,33 +97,9 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 210);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(546, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 56);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // gMSDataSet1
-            // 
-            this.gMSDataSet1.DataSetName = "GMSDataSet1";
-            this.gMSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersDBBindingSource
-            // 
-            this.usersDBBindingSource.DataMember = "usersDB";
-            this.usersDBBindingSource.DataSource = this.gMSDataSet1;
-            // 
-            // usersDBTableAdapter
-            // 
-            this.usersDBTableAdapter.ClearBeforeFill = true;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -205,19 +182,46 @@
             this.accountStatusDataGridViewTextBoxColumn.Name = "accountStatusDataGridViewTextBoxColumn";
             this.accountStatusDataGridViewTextBoxColumn.Width = 125;
             // 
+            // usersDBBindingSource
+            // 
+            this.usersDBBindingSource.DataMember = "usersDB";
+            this.usersDBBindingSource.DataSource = this.gMSDataSet1;
+            // 
+            // gMSDataSet1
+            // 
+            this.gMSDataSet1.DataSetName = "GMSDataSet1";
+            this.gMSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(410, 286);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // usersDBTableAdapter
+            // 
+            this.usersDBTableAdapter.ClearBeforeFill = true;
+            // 
             // AdminUserList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminUserList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminUserList";
             this.Load += new System.EventHandler(this.AdminUserList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

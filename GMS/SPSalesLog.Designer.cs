@@ -175,6 +175,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TBLsaleslog);
             this.Name = "SPSalesLog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SPSalesLog";
             this.Load += new System.EventHandler(this.SPSalesLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TBLsaleslog)).EndInit();

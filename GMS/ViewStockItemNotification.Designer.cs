@@ -53,11 +53,12 @@
             this.dgvItemName,
             this.dgvStockNotificationStatus});
             this.dgvViewStockItemNotification.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvViewStockItemNotification.Location = new System.Drawing.Point(3, 63);
+            this.dgvViewStockItemNotification.Location = new System.Drawing.Point(2, 51);
+            this.dgvViewStockItemNotification.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvViewStockItemNotification.Name = "dgvViewStockItemNotification";
             this.dgvViewStockItemNotification.RowHeadersWidth = 51;
             this.dgvViewStockItemNotification.RowTemplate.Height = 24;
-            this.dgvViewStockItemNotification.Size = new System.Drawing.Size(1290, 497);
+            this.dgvViewStockItemNotification.Size = new System.Drawing.Size(968, 404);
             this.dgvViewStockItemNotification.TabIndex = 0;
             // 
             // dgvStockNotificationID
@@ -86,10 +87,11 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(275, 20);
+            this.txtSearch.Location = new System.Drawing.Point(206, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(615, 22);
+            this.txtSearch.Size = new System.Drawing.Size(462, 19);
             this.txtSearch.TabIndex = 2;
             // 
             // btnRefresh
@@ -97,9 +99,10 @@
             this.btnRefresh.BackColor = System.Drawing.Color.SkyBlue;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRefresh.Location = new System.Drawing.Point(145, 11);
+            this.btnRefresh.Location = new System.Drawing.Point(109, 9);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(109, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 32);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -112,9 +115,10 @@
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1290, 54);
+            this.panel1.Size = new System.Drawing.Size(968, 45);
             this.panel1.TabIndex = 1;
             // 
             // btnSearch
@@ -122,9 +126,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.SkyBlue;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Beige;
-            this.btnSearch.Location = new System.Drawing.Point(25, 10);
+            this.btnSearch.Location = new System.Drawing.Point(19, 8);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(114, 41);
+            this.btnSearch.Size = new System.Drawing.Size(86, 33);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -137,11 +142,12 @@
             this.tableLayoutPanel1.Controls.Add(this.dgvViewStockItemNotification, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1296, 563);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(972, 457);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // contextMenuStrip1
@@ -152,11 +158,13 @@
             // 
             // ViewStockItemNotification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1294, 566);
+            this.ClientSize = new System.Drawing.Size(970, 460);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewStockItemNotification";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewStockItemNotification";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewStockItemNotification_FormClosed);
             this.Load += new System.EventHandler(this.ViewStockItemNotification_Load);

@@ -75,11 +75,12 @@
             this.dgvAssignedCounter,
             this.dgvAccountStatus});
             this.dgvEmployeeList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmployeeList.Location = new System.Drawing.Point(3, 63);
+            this.dgvEmployeeList.Location = new System.Drawing.Point(2, 51);
+            this.dgvEmployeeList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEmployeeList.Name = "dgvEmployeeList";
             this.dgvEmployeeList.RowHeadersWidth = 51;
             this.dgvEmployeeList.RowTemplate.Height = 24;
-            this.dgvEmployeeList.Size = new System.Drawing.Size(922, 392);
+            this.dgvEmployeeList.Size = new System.Drawing.Size(692, 319);
             this.dgvEmployeeList.TabIndex = 0;
             // 
             // dgvUserId
@@ -161,11 +162,12 @@
             this.tableLayoutPanel1.Controls.Add(this.dgvEmployeeList, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, -1);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 458);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 372);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -175,18 +177,20 @@
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(922, 54);
+            this.panel1.Size = new System.Drawing.Size(692, 45);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(275, 20);
+            this.txtSearch.Location = new System.Drawing.Point(206, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(615, 22);
+            this.txtSearch.Size = new System.Drawing.Size(462, 19);
             this.txtSearch.TabIndex = 2;
             // 
             // btnRefresh
@@ -194,9 +198,10 @@
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(145, 11);
+            this.btnRefresh.Location = new System.Drawing.Point(109, 9);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(109, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 32);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -207,9 +212,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(25, 10);
+            this.btnSearch.Location = new System.Drawing.Point(19, 8);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(114, 41);
+            this.btnSearch.Size = new System.Drawing.Size(86, 33);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -217,11 +223,13 @@
             // 
             // EmployeeList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 450);
+            this.ClientSize = new System.Drawing.Size(698, 366);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmployeeList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeList";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmployeeList_FormClosed);
             this.Load += new System.EventHandler(this.EmployeeList_Load);

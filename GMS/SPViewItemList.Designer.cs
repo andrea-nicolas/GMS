@@ -269,6 +269,7 @@
             this.Controls.Add(this.BTEditProfile);
             this.Controls.Add(this.label5);
             this.Name = "SPViewItemList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SPViewItemList";
             this.Load += new System.EventHandler(this.SPViewItemList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TBLitems)).EndInit();

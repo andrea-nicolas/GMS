@@ -57,6 +57,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.TBLcartItems = new System.Windows.Forms.DataGridView();
+            this.BTApply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TBLitems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDqty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBLcartItems)).BeginInit();
@@ -243,10 +244,11 @@
             // 
             // TBDiscount
             // 
-            this.TBDiscount.Location = new System.Drawing.Point(689, 329);
+            this.TBDiscount.Location = new System.Drawing.Point(689, 333);
             this.TBDiscount.Name = "TBDiscount";
-            this.TBDiscount.Size = new System.Drawing.Size(100, 20);
+            this.TBDiscount.Size = new System.Drawing.Size(49, 20);
             this.TBDiscount.TabIndex = 76;
+            this.TBDiscount.TextChanged += new System.EventHandler(this.TBDiscount_TextChanged);
             // 
             // TBCartTotalPrice
             // 
@@ -352,11 +354,23 @@
             this.TBLcartItems.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.TBLcartItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // BTApply
+            // 
+            this.BTApply.Location = new System.Drawing.Point(743, 329);
+            this.BTApply.Margin = new System.Windows.Forms.Padding(2);
+            this.BTApply.Name = "BTApply";
+            this.BTApply.Size = new System.Drawing.Size(46, 26);
+            this.BTApply.TabIndex = 85;
+            this.BTApply.Text = "Apply";
+            this.BTApply.UseVisualStyleBackColor = true;
+            this.BTApply.Click += new System.EventHandler(this.BTApply_Click);
+            // 
             // SPManageCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTApply);
             this.Controls.Add(this.TBLcartItems);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -387,6 +401,7 @@
             this.Controls.Add(this.TBLitems);
             this.Controls.Add(this.button3);
             this.Name = "SPManageCart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SPManageCart";
             this.Load += new System.EventHandler(this.SPManageCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TBLitems)).EndInit();
@@ -427,5 +442,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView TBLcartItems;
+        private System.Windows.Forms.Button BTApply;
     }
 }
