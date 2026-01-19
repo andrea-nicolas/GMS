@@ -34,6 +34,8 @@ namespace GMS
 
         private void AdminApprovals_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gMSDataSet3.usersDB' table. You can move, or remove it, as needed.
+            this.usersDBTableAdapter.Fill(this.gMSDataSet3.usersDB);
             LoadPending();
         }
 

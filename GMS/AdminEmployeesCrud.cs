@@ -38,6 +38,10 @@ namespace GMS
 
         private void AdminEmployeesCrud_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gMSDataSet5.usersDB' table. You can move, or remove it, as needed.
+            this.usersDBTableAdapter.Fill(this.gMSDataSet5.usersDB);
+            // TODO: This line of code loads data into the 'gMSDataSet4.cartsDB' table. You can move, or remove it, as needed.
+            this.cartsDBTableAdapter.Fill(this.gMSDataSet4.cartsDB);
             LoadEmp();
         }
 

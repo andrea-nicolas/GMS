@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,12 +42,31 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.gMSDataSet8 = new GMS.GMSDataSet8();
+            this.itemsDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsDBTableAdapter = new GMS.GMSDataSet8TableAdapters.itemsDBTableAdapter();
+            this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyInStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsDBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemIDDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.qtyInStockDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.itemsDBBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 49);
             this.dataGridView1.Location = new System.Drawing.Point(16, 40);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -172,6 +192,61 @@
             this.textBox4.Size = new System.Drawing.Size(76, 20);
             this.textBox4.TabIndex = 12;
             // 
+            // gMSDataSet8
+            // 
+            this.gMSDataSet8.DataSetName = "GMSDataSet8";
+            this.gMSDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itemsDBBindingSource
+            // 
+            this.itemsDBBindingSource.DataMember = "itemsDB";
+            this.itemsDBBindingSource.DataSource = this.gMSDataSet8;
+            // 
+            // itemsDBTableAdapter
+            // 
+            this.itemsDBTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemIDDataGridViewTextBoxColumn
+            // 
+            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "itemID";
+            this.itemIDDataGridViewTextBoxColumn.HeaderText = "itemID";
+            this.itemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
+            this.itemIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "itemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "itemName";
+            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // qtyInStockDataGridViewTextBoxColumn
+            // 
+            this.qtyInStockDataGridViewTextBoxColumn.DataPropertyName = "qtyInStock";
+            this.qtyInStockDataGridViewTextBoxColumn.HeaderText = "qtyInStock";
+            this.qtyInStockDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.qtyInStockDataGridViewTextBoxColumn.Name = "qtyInStockDataGridViewTextBoxColumn";
+            this.qtyInStockDataGridViewTextBoxColumn.Width = 125;
+            // 
             // AdminItemsCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +271,8 @@
             this.Text = "AdminItemsCrud";
             this.Load += new System.EventHandler(this.AdminItemsCrud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsDBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +293,13 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private GMSDataSet8 gMSDataSet8;
+        private System.Windows.Forms.BindingSource itemsDBBindingSource;
+        private GMSDataSet8TableAdapters.itemsDBTableAdapter itemsDBTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtyInStockDataGridViewTextBoxColumn;
     }
 }

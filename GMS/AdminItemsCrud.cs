@@ -35,6 +35,8 @@ namespace GMS
 
         private void AdminItemsCrud_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gMSDataSet8.itemsDB' table. You can move, or remove it, as needed.
+            this.itemsDBTableAdapter.Fill(this.gMSDataSet8.itemsDB);
             LoadItems();
         }
 
