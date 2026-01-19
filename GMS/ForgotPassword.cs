@@ -69,7 +69,13 @@ namespace GMS
                 SPDashboard spdashboard = new SPDashboard(userID);
                 spdashboard.Show();
                 this.Hide();
-            }      
+            }
+            else if (SQL.getUserDetail("Role", userID) == "manager")
+            {
+                ManagerDashBoard spdashboard = new ManagerDashBoard(userID);
+                spdashboard.Show();
+                this.Hide();
+            }
         }
     }
 }

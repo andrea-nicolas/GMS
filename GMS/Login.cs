@@ -54,6 +54,12 @@ namespace GMS
                     admin.Show();
                     this.Hide();
                 }
+                else if (role == "manager")
+                {
+                    ManagerDashBoard managerdb = new ManagerDashBoard(userID);
+                    managerdb.Show();
+                    this.Hide();
+                }
                 else
                 {
                     MessageBox.Show("Invalid Credentials");

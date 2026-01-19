@@ -55,6 +55,12 @@ namespace GMS
                 managerDashboardpg.Show();
                 this.Hide();
             }
+            else
+            {
+                ManagerDashBoard managerDashboardpg = new ManagerDashBoard(userID);
+                managerDashboardpg.Show();
+                this.Hide();
+            }
         }
 
         private void TBUsername_TextChanged(object sender, EventArgs e)

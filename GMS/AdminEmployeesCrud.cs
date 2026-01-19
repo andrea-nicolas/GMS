@@ -13,7 +13,7 @@ namespace GMS
 {
     public partial class AdminEmployeesCrud : Form
     {
-        short adminId = 102;
+        //short adminId = 102;
         public AdminEmployeesCrud()
         {
             InitializeComponent();

@@ -10,32 +10,35 @@ using System.Windows.Forms;
 
 namespace GMS
 {
-    public partial class EmployeeList : Form
+    public partial class ViewStockItemNotification : Form
     {
-        public EmployeeList()
+        public ViewStockItemNotification()
         {
             InitializeComponent();
         }
 
-        private void loadEmployeeInforComm(string SearchValue = "")
+        private void loadStockNotificationInfo(string SearchValue = "")
         {
             try
             {
-                string query = @"SELECT userID, username, email, gender, phoneNo, 
-                        role, accountStatus, securityAnswer, assignedCounter
-                 FROM usersDB";
+                string query = @"
+        SELECT 
+            sn.stockNotificationID,
+            i.itemName,
+            sn.stockNotificationStatus
+        FROM stockNotificationDB sn
+        INNER JOIN itemsDB i ON sn.itemID = i.itemID";
 
                 if (!string.IsNullOrEmpty(SearchValue))
                 {
                     int id;
                     if (int.TryParse(SearchValue, out id))
                     {
-                        query += " WHERE userID = " + id;
+                        query += " WHERE sn.stockNotificationID = " + id;
                     }
                     else
                     {
-                        query += " WHERE (username LIKE '%" + SearchValue + "%' " +
-                                 "OR email LIKE '%" + SearchValue + "%')";
+                        query += " WHERE i.itemName LIKE '%" + SearchValue + "%'";
                     }
                 }
 
@@ -47,11 +50,11 @@ namespace GMS
                     return;
                 }
 
-                dgvEmployeeList.AutoGenerateColumns = true;
+                dgvViewStockItemNotification.AutoGenerateColumns = true;
 
-                dgvEmployeeList.DataSource = result.Data;
-                dgvEmployeeList.Refresh();
-                dgvEmployeeList.ClearSelection();
+                dgvViewStockItemNotification.DataSource = result.Data;
+                dgvViewStockItemNotification.Refresh();
+                dgvViewStockItemNotification.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -60,15 +63,7 @@ namespace GMS
         }
 
 
-
-
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void EmployeeList_Load(object sender, EventArgs e)
+        private void ViewStockItemNotification_Load(object sender, EventArgs e)
         {
             if (this.Owner != null)
 
@@ -77,30 +72,25 @@ namespace GMS
                 this.Owner.Hide();
 
             }
-            this.loadEmployeeInforComm();   
+            this.loadStockNotificationInfo();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            this.loadEmployeeInforComm(txtSearch.Text);
+            this.loadStockNotificationInfo(txtSearch.Text);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            this.loadEmployeeInforComm();
+            this.loadStockNotificationInfo();
         }
 
-        private void EmployeeList_FormClosed(object sender, FormClosedEventArgs e)
+        private void ViewStockItemNotification_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (this.Owner != null)
             {
                 this.Owner.Show();
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

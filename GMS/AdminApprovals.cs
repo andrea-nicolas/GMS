@@ -12,7 +12,7 @@ namespace GMS
 {
     public partial class AdminApprovals : Form
     {
-        short adminId = 102;
+        //short adminId = 102;
         public AdminApprovals()
         {
             InitializeComponent();

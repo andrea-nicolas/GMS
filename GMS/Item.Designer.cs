@@ -38,6 +38,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.dgvItemInfo = new System.Windows.Forms.DataGridView();
+            this.dgvItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.txtQuantityInStock = new System.Windows.Forms.TextBox();
@@ -49,11 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtItemId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,6 +80,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnSearch);
@@ -99,7 +100,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(117, 9);
             this.btnRefresh.Name = "btnRefresh";
@@ -111,7 +112,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(9, 9);
             this.btnSearch.Name = "btnSearch";
@@ -123,6 +124,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnNew);
@@ -134,8 +136,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(549, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 39);
@@ -146,7 +149,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(292, 9);
             this.btnDelete.Name = "btnDelete";
@@ -158,7 +161,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.Location = new System.Drawing.Point(12, 8);
             this.btnNew.Name = "btnNew";
@@ -185,8 +188,49 @@
             this.dgvItemInfo.TabIndex = 2;
             this.dgvItemInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemInfo_CellDoubleClick);
             // 
+            // dgvItemId
+            // 
+            this.dgvItemId.DataPropertyName = "ItemId";
+            this.dgvItemId.HeaderText = "Item ID";
+            this.dgvItemId.MinimumWidth = 6;
+            this.dgvItemId.Name = "dgvItemId";
+            this.dgvItemId.Width = 125;
+            // 
+            // dgvItemName
+            // 
+            this.dgvItemName.DataPropertyName = "itemName";
+            this.dgvItemName.HeaderText = "Item Name";
+            this.dgvItemName.MinimumWidth = 6;
+            this.dgvItemName.Name = "dgvItemName";
+            this.dgvItemName.Width = 125;
+            // 
+            // dgvCategory
+            // 
+            this.dgvCategory.DataPropertyName = "category";
+            this.dgvCategory.HeaderText = "Category";
+            this.dgvCategory.MinimumWidth = 6;
+            this.dgvCategory.Name = "dgvCategory";
+            this.dgvCategory.Width = 125;
+            // 
+            // dgvPrice
+            // 
+            this.dgvPrice.DataPropertyName = "price";
+            this.dgvPrice.HeaderText = "Price";
+            this.dgvPrice.MinimumWidth = 6;
+            this.dgvPrice.Name = "dgvPrice";
+            this.dgvPrice.Width = 125;
+            // 
+            // dgvQuantity
+            // 
+            this.dgvQuantity.DataPropertyName = "qtnlnStock";
+            this.dgvQuantity.HeaderText = "Quantity";
+            this.dgvQuantity.MinimumWidth = 6;
+            this.dgvQuantity.Name = "dgvQuantity";
+            this.dgvQuantity.Width = 125;
+            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel3.Controls.Add(this.cmbCategory);
             this.panel3.Controls.Add(this.txtQuantityInStock);
             this.panel3.Controls.Add(this.label5);
@@ -300,46 +344,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Item ID:";
             // 
-            // dgvItemId
-            // 
-            this.dgvItemId.DataPropertyName = "ItemId";
-            this.dgvItemId.HeaderText = "Item ID";
-            this.dgvItemId.MinimumWidth = 6;
-            this.dgvItemId.Name = "dgvItemId";
-            this.dgvItemId.Width = 125;
-            // 
-            // dgvItemName
-            // 
-            this.dgvItemName.DataPropertyName = "itemName";
-            this.dgvItemName.HeaderText = "Item Name";
-            this.dgvItemName.MinimumWidth = 6;
-            this.dgvItemName.Name = "dgvItemName";
-            this.dgvItemName.Width = 125;
-            // 
-            // dgvCategory
-            // 
-            this.dgvCategory.DataPropertyName = "category";
-            this.dgvCategory.HeaderText = "Category";
-            this.dgvCategory.MinimumWidth = 6;
-            this.dgvCategory.Name = "dgvCategory";
-            this.dgvCategory.Width = 125;
-            // 
-            // dgvPrice
-            // 
-            this.dgvPrice.DataPropertyName = "price";
-            this.dgvPrice.HeaderText = "Price";
-            this.dgvPrice.MinimumWidth = 6;
-            this.dgvPrice.Name = "dgvPrice";
-            this.dgvPrice.Width = 125;
-            // 
-            // dgvQuantity
-            // 
-            this.dgvQuantity.DataPropertyName = "qtnlnStock";
-            this.dgvQuantity.HeaderText = "Quantity";
-            this.dgvQuantity.MinimumWidth = 6;
-            this.dgvQuantity.Name = "dgvQuantity";
-            this.dgvQuantity.Width = 125;
-            // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -348,6 +352,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Item";
             this.Text = "Item";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Item_FormClosed);
             this.Load += new System.EventHandler(this.Item_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

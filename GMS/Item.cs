@@ -69,7 +69,12 @@ namespace GMS
 
         private void Item_Load(object sender, EventArgs e)
         {
+            if (this.Owner != null) 
+            {
+                this.Owner.Hide();
+            }
             this.loadItemInforComm();
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -246,6 +251,14 @@ namespace GMS
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Item_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(this.Owner != null)
+            { 
+                this.Owner.Show(); 
             }
         }
     }
