@@ -40,8 +40,6 @@ namespace GMS
 
         private void AdminSalespersonLogs_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gMSDataSet9.salesLogDB' table. You can move, or remove it, as needed.
-            this.salesLogDBTableAdapter.Fill(this.gMSDataSet9.salesLogDB);
             LoadLogs();
         }
 

@@ -35,8 +35,6 @@ namespace GMS
 
         private void AdminActivityLog_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gMSDataSet2.activityLogDB' table. You can move, or remove it, as needed.
-            this.activityLogDBTableAdapter.Fill(this.gMSDataSet2.activityLogDB);
             LoadAct();
         }
     }
