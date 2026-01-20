@@ -251,7 +251,7 @@
             // 
             // TBSecurityAnswer
             // 
-            this.TBSecurityAnswer.BackColor = System.Drawing.Color.Tan;
+            this.TBSecurityAnswer.BackColor = System.Drawing.Color.BurlyWood;
             this.TBSecurityAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBSecurityAnswer.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBSecurityAnswer.Location = new System.Drawing.Point(471, 162);
@@ -284,7 +284,7 @@
             this.panel1.Location = new System.Drawing.Point(39, 95);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 325);
+            this.panel1.Size = new System.Drawing.Size(724, 325);
             this.panel1.TabIndex = 52;
             // 
             // label8

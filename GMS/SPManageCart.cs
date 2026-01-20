@@ -320,5 +320,20 @@ namespace GMS
                 }
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBtotalPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
