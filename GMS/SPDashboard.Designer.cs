@@ -83,8 +83,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 26);
+            this.label2.Font = new System.Drawing.Font("Ebrima", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(120, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 25);
             this.label2.TabIndex = 16;
@@ -181,7 +181,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ebrima", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(238, 26);
+            this.label1.Location = new System.Drawing.Point(240, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 50);
             this.label1.TabIndex = 9;
@@ -204,10 +204,10 @@
             // 
             // TBAssignedCounter
             // 
-            this.TBAssignedCounter.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.TBAssignedCounter.BackColor = System.Drawing.Color.Bisque;
             this.TBAssignedCounter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBAssignedCounter.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBAssignedCounter.Location = new System.Drawing.Point(307, 22);
+            this.TBAssignedCounter.Location = new System.Drawing.Point(307, 25);
             this.TBAssignedCounter.Name = "TBAssignedCounter";
             this.TBAssignedCounter.ReadOnly = true;
             this.TBAssignedCounter.Size = new System.Drawing.Size(55, 29);
@@ -252,7 +252,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel3.BackColor = System.Drawing.Color.Bisque;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.TBAssignedCounter);
@@ -265,10 +265,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 22);
+            this.label4.Font = new System.Drawing.Font("Ebrima", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 32);
+            this.label4.Size = new System.Drawing.Size(66, 30);
             this.label4.TabIndex = 23;
             this.label4.Text = "Tools";
             // 
@@ -291,7 +291,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(27, 87);
             this.panel2.Name = "panel2";
@@ -301,7 +300,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Location = new System.Drawing.Point(198, 87);
             this.panel5.Name = "panel5";
@@ -311,7 +309,6 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Location = new System.Drawing.Point(359, 87);
             this.panel6.Name = "panel6";
