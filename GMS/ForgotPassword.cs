@@ -76,6 +76,12 @@ namespace GMS
                 spdashboard.Show();
                 this.Hide();
             }
+            else if (SQL.getUserDetail("Role",userID) == "admin")
+            {
+                AdminDashboard a = new AdminDashboard(userID);
+                a.Show();
+                this.Hide();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

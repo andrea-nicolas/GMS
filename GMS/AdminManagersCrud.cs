@@ -25,6 +25,15 @@ namespace GMS
 
         private void AdminManagersCrud_Load(object sender, EventArgs e)
         {
+            if (this.Owner != null)
+
+            {
+
+                this.Owner.Hide();
+
+            }
+            
+
             LoadManagers();
             // TODO: This line of code loads data into the 'gMSDataSet.usersDB' table. You can move, or remove it, as needed.
             this.usersDBTableAdapter.Fill(this.gMSDataSet.usersDB);
@@ -91,6 +100,14 @@ namespace GMS
             SQL.execute($"DELETE FROM usersdb WHERE userID={userId}");
             Log("Employee deleted", userId);
             LoadManagers();
+        }
+
+        private void AdminManagersCrud_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
         }
     }
 }

@@ -30,143 +30,80 @@ namespace GMS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gMSDataSet2 = new GMS.GMSDataSet2();
-            this.activityLogDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.activityLogDBTableAdapter = new GMS.GMSDataSet2TableAdapters.activityLogDBTableAdapter();
-            this.activityLogIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doneByUserIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.targetItemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activityDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.targetUserIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.targetDiscountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activityLogDBBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-5, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(989, 584);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.activityLogIDDataGridViewTextBoxColumn,
-            this.doneByUserIDDataGridViewTextBoxColumn,
-            this.targetItemIDDataGridViewTextBoxColumn,
-            this.activityDTDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.targetUserIDDataGridViewTextBoxColumn,
-            this.targetDiscountIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.activityLogDBBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 42);
-            this.dataGridView1.Location = new System.Drawing.Point(23, 34);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(532, 186);
+            this.dataGridView1.Size = new System.Drawing.Size(488, 528);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Location = new System.Drawing.Point(250, 260);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(497, 53);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(489, 528);
+            this.panel1.TabIndex = 1;
             // 
-            // gMSDataSet2
+            // panel2
             // 
-            this.gMSDataSet2.DataSetName = "GMSDataSet2";
-            this.gMSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(488, 44);
+            this.panel2.TabIndex = 2;
             // 
-            // activityLogDBBindingSource
+            // panel3
             // 
-            this.activityLogDBBindingSource.DataMember = "activityLogDB";
-            this.activityLogDBBindingSource.DataSource = this.gMSDataSet2;
-            // 
-            // activityLogDBTableAdapter
-            // 
-            this.activityLogDBTableAdapter.ClearBeforeFill = true;
-            // 
-            // activityLogIDDataGridViewTextBoxColumn
-            // 
-            this.activityLogIDDataGridViewTextBoxColumn.DataPropertyName = "activityLogID";
-            this.activityLogIDDataGridViewTextBoxColumn.HeaderText = "activityLogID";
-            this.activityLogIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.activityLogIDDataGridViewTextBoxColumn.Name = "activityLogIDDataGridViewTextBoxColumn";
-            this.activityLogIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.activityLogIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // doneByUserIDDataGridViewTextBoxColumn
-            // 
-            this.doneByUserIDDataGridViewTextBoxColumn.DataPropertyName = "doneByUserID";
-            this.doneByUserIDDataGridViewTextBoxColumn.HeaderText = "doneByUserID";
-            this.doneByUserIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.doneByUserIDDataGridViewTextBoxColumn.Name = "doneByUserIDDataGridViewTextBoxColumn";
-            this.doneByUserIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // targetItemIDDataGridViewTextBoxColumn
-            // 
-            this.targetItemIDDataGridViewTextBoxColumn.DataPropertyName = "targetItemID";
-            this.targetItemIDDataGridViewTextBoxColumn.HeaderText = "targetItemID";
-            this.targetItemIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.targetItemIDDataGridViewTextBoxColumn.Name = "targetItemIDDataGridViewTextBoxColumn";
-            this.targetItemIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // activityDTDataGridViewTextBoxColumn
-            // 
-            this.activityDTDataGridViewTextBoxColumn.DataPropertyName = "activityDT";
-            this.activityDTDataGridViewTextBoxColumn.HeaderText = "activityDT";
-            this.activityDTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.activityDTDataGridViewTextBoxColumn.Name = "activityDTDataGridViewTextBoxColumn";
-            this.activityDTDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // targetUserIDDataGridViewTextBoxColumn
-            // 
-            this.targetUserIDDataGridViewTextBoxColumn.DataPropertyName = "targetUserID";
-            this.targetUserIDDataGridViewTextBoxColumn.HeaderText = "targetUserID";
-            this.targetUserIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.targetUserIDDataGridViewTextBoxColumn.Name = "targetUserIDDataGridViewTextBoxColumn";
-            this.targetUserIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // targetDiscountIDDataGridViewTextBoxColumn
-            // 
-            this.targetDiscountIDDataGridViewTextBoxColumn.DataPropertyName = "targetDiscountID";
-            this.targetDiscountIDDataGridViewTextBoxColumn.HeaderText = "targetDiscountID";
-            this.targetDiscountIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.targetDiscountIDDataGridViewTextBoxColumn.Name = "targetDiscountIDDataGridViewTextBoxColumn";
-            this.targetDiscountIDDataGridViewTextBoxColumn.Width = 125;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(497, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(489, 44);
+            this.panel3.TabIndex = 3;
             // 
             // AdminActivityLog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(982, 588);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminActivityLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminActivityLog";
             this.Load += new System.EventHandler(this.AdminActivityLog_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gMSDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activityLogDBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,17 +115,10 @@ namespace GMS
 
         #endregion
 
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private GMSDataSet2 gMSDataSet2;
-        private System.Windows.Forms.BindingSource activityLogDBBindingSource;
-        private GMSDataSet2TableAdapters.activityLogDBTableAdapter activityLogDBTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activityLogIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doneByUserIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn targetItemIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activityDTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn targetUserIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn targetDiscountIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
