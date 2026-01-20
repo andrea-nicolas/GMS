@@ -138,7 +138,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkOrange;
             this.label1.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 13);
+            this.label1.Location = new System.Drawing.Point(17, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 25);
             this.label1.TabIndex = 24;
@@ -150,7 +150,7 @@
             this.TBTotalSales.BackColor = System.Drawing.Color.DarkOrange;
             this.TBTotalSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBTotalSales.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBTotalSales.Location = new System.Drawing.Point(195, 9);
+            this.TBTotalSales.Location = new System.Drawing.Point(194, 14);
             this.TBTotalSales.Name = "TBTotalSales";
             this.TBTotalSales.ReadOnly = true;
             this.TBTotalSales.Size = new System.Drawing.Size(137, 29);
@@ -218,7 +218,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.DarkOrange;
             this.label3.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(157, 13);
+            this.label3.Location = new System.Drawing.Point(156, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 25);
             this.label3.TabIndex = 26;

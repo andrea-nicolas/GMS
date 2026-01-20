@@ -17,7 +17,7 @@ namespace GMS
         {
             InitializeComponent();
             userID = currentUser;
-            TBAssignedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
+            //TBAssignedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
             TBLCarts.DataSource = SQL.getTableData("cartsdb", " WHERE cartStatus = 'pending'");
             TBLCarts.DataSource = SQL.getTableData("cartsdb", " WHERE cartStatus = 'pending'");
         }
@@ -100,6 +100,16 @@ namespace GMS
             SPManageCart speditcartpg = new SPManageCart(userID, cartID);
             speditcartpg.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

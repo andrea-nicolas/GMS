@@ -41,18 +41,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TBUsername
             // 
             this.TBUsername.BackColor = System.Drawing.Color.Linen;
             this.TBUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBUsername.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBUsername.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBUsername.ForeColor = System.Drawing.Color.Black;
-            this.TBUsername.Location = new System.Drawing.Point(594, 168);
+            this.TBUsername.Location = new System.Drawing.Point(44, 154);
             this.TBUsername.Margin = new System.Windows.Forms.Padding(2);
             this.TBUsername.Name = "TBUsername";
-            this.TBUsername.Size = new System.Drawing.Size(159, 25);
+            this.TBUsername.Size = new System.Drawing.Size(185, 24);
             this.TBUsername.TabIndex = 2;
             this.TBUsername.TextChanged += new System.EventHandler(this.TxtId_TextChanged);
             // 
@@ -60,13 +61,13 @@
             // 
             this.TBPassword.BackColor = System.Drawing.Color.Linen;
             this.TBPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBPassword.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBPassword.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBPassword.ForeColor = System.Drawing.Color.Black;
-            this.TBPassword.Location = new System.Drawing.Point(594, 217);
+            this.TBPassword.Location = new System.Drawing.Point(44, 210);
             this.TBPassword.Margin = new System.Windows.Forms.Padding(2);
             this.TBPassword.Name = "TBPassword";
             this.TBPassword.PasswordChar = '*';
-            this.TBPassword.Size = new System.Drawing.Size(159, 25);
+            this.TBPassword.Size = new System.Drawing.Size(185, 24);
             this.TBPassword.TabIndex = 3;
             // 
             // BTLogin
@@ -76,10 +77,10 @@
             this.BTLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BTLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTLogin.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTLogin.Location = new System.Drawing.Point(594, 322);
+            this.BTLogin.Location = new System.Drawing.Point(43, 315);
             this.BTLogin.Margin = new System.Windows.Forms.Padding(2);
             this.BTLogin.Name = "BTLogin";
-            this.BTLogin.Size = new System.Drawing.Size(159, 33);
+            this.BTLogin.Size = new System.Drawing.Size(186, 38);
             this.BTLogin.TabIndex = 4;
             this.BTLogin.Text = "Log In";
             this.BTLogin.UseVisualStyleBackColor = false;
@@ -91,10 +92,10 @@
             this.BTRegister.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BTRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTRegister.Font = new System.Drawing.Font("Ebrima", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTRegister.Location = new System.Drawing.Point(594, 377);
+            this.BTRegister.Location = new System.Drawing.Point(43, 378);
             this.BTRegister.Margin = new System.Windows.Forms.Padding(2);
             this.BTRegister.Name = "BTRegister";
-            this.BTRegister.Size = new System.Drawing.Size(159, 33);
+            this.BTRegister.Size = new System.Drawing.Size(186, 38);
             this.BTRegister.TabIndex = 6;
             this.BTRegister.Text = "Sign Up";
             this.BTRegister.UseVisualStyleBackColor = false;
@@ -106,10 +107,10 @@
             this.BTForgotPass.FlatAppearance.BorderSize = 0;
             this.BTForgotPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTForgotPass.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTForgotPass.Location = new System.Drawing.Point(659, 240);
+            this.BTForgotPass.Location = new System.Drawing.Point(124, 233);
             this.BTForgotPass.Margin = new System.Windows.Forms.Padding(2);
             this.BTForgotPass.Name = "BTForgotPass";
-            this.BTForgotPass.Size = new System.Drawing.Size(102, 21);
+            this.BTForgotPass.Size = new System.Drawing.Size(119, 24);
             this.BTForgotPass.TabIndex = 7;
             this.BTForgotPass.Text = "Forgot Password?";
             this.BTForgotPass.UseVisualStyleBackColor = false;
@@ -120,7 +121,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.NavajoWhite;
             this.label2.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(593, 201);
+            this.label2.Location = new System.Drawing.Point(43, 192);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
@@ -132,7 +133,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.NavajoWhite;
             this.label7.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(591, 362);
+            this.label7.Location = new System.Drawing.Point(40, 361);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 13);
@@ -144,7 +145,8 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.NavajoWhite;
             this.label8.Font = new System.Drawing.Font("Ebrima", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(618, 44);
+            this.label8.Location = new System.Drawing.Point(80, 40);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 47);
             this.label8.TabIndex = 15;
@@ -155,7 +157,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.NavajoWhite;
             this.label1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(592, 151);
+            this.label1.Location = new System.Drawing.Point(42, 134);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 17);
@@ -166,9 +168,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(162, 128);
+            this.pictureBox1.Location = new System.Drawing.Point(138, 124);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 173);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -178,36 +181,39 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(555, 12);
+            this.panel1.Controls.Add(this.BTLogin);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.BTRegister);
+            this.panel1.Controls.Add(this.TBPassword);
+            this.panel1.Controls.Add(this.TBUsername);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.BTForgotPass);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(515, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 426);
+            this.panel1.Size = new System.Drawing.Size(272, 443);
             this.panel1.TabIndex = 16;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.BTRegister);
-            this.Controls.Add(this.BTLogin);
-            this.Controls.Add(this.TBPassword);
-            this.Controls.Add(this.TBUsername);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.BTForgotPass);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

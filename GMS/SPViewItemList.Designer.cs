@@ -73,7 +73,7 @@
             // BTLogout
             // 
             this.BTLogout.BackColor = System.Drawing.Color.Peru;
-            this.BTLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.NavajoWhite;
+            this.BTLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Peru;
             this.BTLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTLogout.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTLogout.Location = new System.Drawing.Point(23, 374);
@@ -151,18 +151,20 @@
             // 
             this.TBitemID.BackColor = System.Drawing.Color.Linen;
             this.TBitemID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBitemID.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBitemID.Location = new System.Drawing.Point(343, 346);
             this.TBitemID.Name = "TBitemID";
-            this.TBitemID.Size = new System.Drawing.Size(100, 20);
+            this.TBitemID.Size = new System.Drawing.Size(100, 24);
             this.TBitemID.TabIndex = 37;
             // 
             // TBname
             // 
             this.TBname.BackColor = System.Drawing.Color.Linen;
             this.TBname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBname.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBname.Location = new System.Drawing.Point(343, 377);
             this.TBname.Name = "TBname";
-            this.TBname.Size = new System.Drawing.Size(100, 20);
+            this.TBname.Size = new System.Drawing.Size(100, 24);
             this.TBname.TabIndex = 38;
             // 
             // BTNotify
@@ -197,6 +199,7 @@
             // CBcategory
             // 
             this.CBcategory.BackColor = System.Drawing.Color.Linen;
+            this.CBcategory.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBcategory.FormattingEnabled = true;
             this.CBcategory.Items.AddRange(new object[] {
             "Drinks",
@@ -207,7 +210,7 @@
             "Vegetables"});
             this.CBcategory.Location = new System.Drawing.Point(343, 410);
             this.CBcategory.Name = "CBcategory";
-            this.CBcategory.Size = new System.Drawing.Size(100, 21);
+            this.CBcategory.Size = new System.Drawing.Size(100, 23);
             this.CBcategory.TabIndex = 44;
             this.CBcategory.SelectedIndexChanged += new System.EventHandler(this.CBcategory_SelectedIndexChanged);
             // 
@@ -251,10 +254,11 @@
             // 
             this.TBQty.BackColor = System.Drawing.Color.BurlyWood;
             this.TBQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBQty.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBQty.Location = new System.Drawing.Point(688, 345);
             this.TBQty.Name = "TBQty";
             this.TBQty.ReadOnly = true;
-            this.TBQty.Size = new System.Drawing.Size(100, 20);
+            this.TBQty.Size = new System.Drawing.Size(100, 24);
             this.TBQty.TabIndex = 48;
             // 
             // panel7
@@ -307,9 +311,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(227, 329);
+            this.panel1.Location = new System.Drawing.Point(251, 329);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(308, 109);
+            this.panel1.Size = new System.Drawing.Size(284, 109);
             this.panel1.TabIndex = 50;
             // 
             // SPViewItemList
