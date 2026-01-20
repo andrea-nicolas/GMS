@@ -136,7 +136,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.label1.BackColor = System.Drawing.Color.DarkOrange;
             this.label1.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 13);
             this.label1.Name = "label1";
@@ -147,7 +147,7 @@
             // 
             // TBTotalSales
             // 
-            this.TBTotalSales.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.TBTotalSales.BackColor = System.Drawing.Color.DarkOrange;
             this.TBTotalSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TBTotalSales.Font = new System.Drawing.Font("Ebrima", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBTotalSales.Location = new System.Drawing.Point(195, 9);
@@ -203,7 +203,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
@@ -216,7 +216,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.label3.BackColor = System.Drawing.Color.DarkOrange;
             this.label3.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(157, 13);
             this.label3.Name = "label3";

@@ -37,7 +37,6 @@
             this.BTLogout = new System.Windows.Forms.Button();
             this.BTSalesLog = new System.Windows.Forms.Button();
             this.BTEditProfile = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.TBAssignedCounter = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,6 +51,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -176,16 +176,6 @@
             this.BTEditProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTEditProfile.UseVisualStyleBackColor = false;
             this.BTEditProfile.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 50);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Welcome!";
             // 
             // button8
             // 
@@ -349,6 +339,16 @@
             this.pictureBox4.TabIndex = 26;
             this.pictureBox4.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ebrima", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(240, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 50);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Welcome!";
+            // 
             // SPDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,7 +391,6 @@
         private System.Windows.Forms.Button BTLogout;
         private System.Windows.Forms.Button BTSalesLog;
         private System.Windows.Forms.Button BTEditProfile;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox TBAssignedCounter;
         private System.Windows.Forms.Panel panel1;
@@ -406,5 +405,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label1;
     }
 }
