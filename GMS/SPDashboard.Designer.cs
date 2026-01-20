@@ -71,7 +71,7 @@
             this.BTResetPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.BTResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTResetPassword.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTResetPassword.Location = new System.Drawing.Point(21, 155);
+            this.BTResetPassword.Location = new System.Drawing.Point(23, 160);
             this.BTResetPassword.Name = "BTResetPassword";
             this.BTResetPassword.Size = new System.Drawing.Size(151, 32);
             this.BTResetPassword.TabIndex = 17;
@@ -136,9 +136,9 @@
             this.BTLogout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BTLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTLogout.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTLogout.Location = new System.Drawing.Point(21, 398);
+            this.BTLogout.Location = new System.Drawing.Point(23, 374);
             this.BTLogout.Name = "BTLogout";
-            this.BTLogout.Size = new System.Drawing.Size(146, 28);
+            this.BTLogout.Size = new System.Drawing.Size(151, 28);
             this.BTLogout.TabIndex = 12;
             this.BTLogout.Text = "Log Out";
             this.BTLogout.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@
             this.BTSalesLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTSalesLog.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTSalesLog.ForeColor = System.Drawing.Color.Black;
-            this.BTSalesLog.Location = new System.Drawing.Point(21, 79);
+            this.BTSalesLog.Location = new System.Drawing.Point(23, 84);
             this.BTSalesLog.Name = "BTSalesLog";
             this.BTSalesLog.Size = new System.Drawing.Size(151, 32);
             this.BTSalesLog.TabIndex = 11;
@@ -168,7 +168,7 @@
             this.BTEditProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Bisque;
             this.BTEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTEditProfile.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTEditProfile.Location = new System.Drawing.Point(21, 117);
+            this.BTEditProfile.Location = new System.Drawing.Point(23, 122);
             this.BTEditProfile.Name = "BTEditProfile";
             this.BTEditProfile.Size = new System.Drawing.Size(151, 32);
             this.BTEditProfile.TabIndex = 10;
@@ -193,7 +193,7 @@
             this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(21, 196);
+            this.button8.Location = new System.Drawing.Point(23, 201);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(151, 32);
             this.button8.TabIndex = 18;
@@ -225,15 +225,15 @@
             this.panel1.Controls.Add(this.BTResetPassword);
             this.panel1.Controls.Add(this.BTEditProfile);
             this.panel1.Controls.Add(this.BTSalesLog);
-            this.panel1.Location = new System.Drawing.Point(-1, -2);
+            this.panel1.Location = new System.Drawing.Point(-1, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 455);
+            this.panel1.Size = new System.Drawing.Size(213, 441);
             this.panel1.TabIndex = 20;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,7 +244,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ebrima", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 19);
+            this.label3.Location = new System.Drawing.Point(53, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 37);
             this.label3.TabIndex = 21;
