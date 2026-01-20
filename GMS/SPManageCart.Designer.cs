@@ -74,7 +74,7 @@
             this.TBunitPrice.BackColor = System.Drawing.Color.BurlyWood;
             this.TBunitPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBunitPrice.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBunitPrice.Location = new System.Drawing.Point(783, 130);
+            this.TBunitPrice.Location = new System.Drawing.Point(725, 131);
             this.TBunitPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TBunitPrice.Name = "TBunitPrice";
             this.TBunitPrice.ReadOnly = true;
@@ -85,7 +85,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(427, 152);
+            this.label11.Location = new System.Drawing.Point(368, 154);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 15);
@@ -119,7 +119,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(440, 123);
+            this.label8.Location = new System.Drawing.Point(381, 125);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 15);
@@ -168,7 +168,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.NavajoWhite;
             this.label5.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(710, 134);
+            this.label5.Location = new System.Drawing.Point(652, 135);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 15);
@@ -180,7 +180,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.NavajoWhite;
             this.label4.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(715, 106);
+            this.label4.Location = new System.Drawing.Point(657, 107);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 15);
@@ -192,7 +192,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.NavajoWhite;
             this.label3.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(732, 80);
+            this.label3.Location = new System.Drawing.Point(674, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 15);
@@ -204,7 +204,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.NavajoWhite;
             this.label2.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(724, 51);
+            this.label2.Location = new System.Drawing.Point(666, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
@@ -215,7 +215,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(663, 17);
+            this.label1.Location = new System.Drawing.Point(570, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 21);
@@ -229,7 +229,7 @@
             this.TBLitems.Location = new System.Drawing.Point(21, 72);
             this.TBLitems.Margin = new System.Windows.Forms.Padding(2);
             this.TBLitems.Name = "TBLitems";
-            this.TBLitems.Size = new System.Drawing.Size(651, 187);
+            this.TBLitems.Size = new System.Drawing.Size(558, 187);
             this.TBLitems.TabIndex = 48;
             this.TBLitems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TBLcart_CellContentClick);
             this.TBLitems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TBLcart_CellContentClick);
@@ -241,7 +241,7 @@
             this.button3.BackColor = System.Drawing.Color.Peru;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(695, 13);
+            this.button3.Location = new System.Drawing.Point(637, 11);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(226, 35);
@@ -254,7 +254,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(412, 14);
+            this.label12.Location = new System.Drawing.Point(353, 16);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 21);
@@ -267,7 +267,7 @@
             this.TBitemID.BackColor = System.Drawing.Color.Linen;
             this.TBitemID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBitemID.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBitemID.Location = new System.Drawing.Point(782, 43);
+            this.TBitemID.Location = new System.Drawing.Point(724, 44);
             this.TBitemID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TBitemID.Name = "TBitemID";
             this.TBitemID.Size = new System.Drawing.Size(115, 24);
@@ -278,7 +278,7 @@
             this.TBname.BackColor = System.Drawing.Color.Linen;
             this.TBname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBname.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBname.Location = new System.Drawing.Point(783, 73);
+            this.TBname.Location = new System.Drawing.Point(725, 74);
             this.TBname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TBname.Name = "TBname";
             this.TBname.Size = new System.Drawing.Size(114, 24);
@@ -339,7 +339,7 @@
             this.TBtotalPrice.BackColor = System.Drawing.Color.BurlyWood;
             this.TBtotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBtotalPrice.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBtotalPrice.Location = new System.Drawing.Point(506, 149);
+            this.TBtotalPrice.Location = new System.Drawing.Point(447, 151);
             this.TBtotalPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TBtotalPrice.Name = "TBtotalPrice";
             this.TBtotalPrice.ReadOnly = true;
@@ -351,7 +351,7 @@
             // 
             this.NUDqty.BackColor = System.Drawing.Color.Linen;
             this.NUDqty.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUDqty.Location = new System.Drawing.Point(505, 119);
+            this.NUDqty.Location = new System.Drawing.Point(446, 121);
             this.NUDqty.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NUDqty.Name = "NUDqty";
             this.NUDqty.Size = new System.Drawing.Size(118, 24);
@@ -370,7 +370,7 @@
             "Toiletries",
             "Food",
             "Vegetables"});
-            this.CBcategory.Location = new System.Drawing.Point(783, 103);
+            this.CBcategory.Location = new System.Drawing.Point(725, 104);
             this.CBcategory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CBcategory.Name = "CBcategory";
             this.CBcategory.Size = new System.Drawing.Size(115, 23);
@@ -381,7 +381,7 @@
             this.button1.BackColor = System.Drawing.Color.SandyBrown;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(705, 167);
+            this.button1.Location = new System.Drawing.Point(647, 168);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 30);
@@ -395,7 +395,7 @@
             this.button4.BackColor = System.Drawing.Color.SandyBrown;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(530, 188);
+            this.button4.Location = new System.Drawing.Point(471, 190);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 30);
@@ -409,7 +409,7 @@
             this.button5.BackColor = System.Drawing.Color.SandyBrown;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(430, 188);
+            this.button5.Location = new System.Drawing.Point(371, 190);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 30);
@@ -425,7 +425,7 @@
             this.TBLcartItems.Location = new System.Drawing.Point(22, 286);
             this.TBLcartItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TBLcartItems.Name = "TBLcartItems";
-            this.TBLcartItems.Size = new System.Drawing.Size(397, 211);
+            this.TBLcartItems.Size = new System.Drawing.Size(339, 211);
             this.TBLcartItems.TabIndex = 84;
             this.TBLcartItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.TBLcartItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -463,7 +463,7 @@
             this.panel1.Location = new System.Drawing.Point(12, 60);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 207);
+            this.panel1.Size = new System.Drawing.Size(851, 207);
             this.panel1.TabIndex = 86;
             // 
             // panel2
@@ -480,7 +480,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 273);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(639, 233);
+            this.panel2.Size = new System.Drawing.Size(576, 233);
             this.panel2.TabIndex = 87;
             // 
             // panel3
@@ -497,7 +497,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.TBCartTotalPrice);
             this.panel3.Controls.Add(this.TBtotalAfterVAT);
-            this.panel3.Location = new System.Drawing.Point(658, 273);
+            this.panel3.Location = new System.Drawing.Point(596, 273);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(267, 234);
@@ -508,7 +508,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.ClientSize = new System.Drawing.Size(880, 519);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.TBLcartItems);

@@ -51,11 +51,11 @@ namespace GMS
             }
             else if ( SQL.getUserDetail("role", userID) == "admin")
             {
-                AdminDashboard managerDashboardpg = new AdminDashboard(userID);
+                DashBoardOfAdmin managerDashboardpg = new DashBoardOfAdmin();
                 managerDashboardpg.Show();
                 this.Hide();
             }
-            else
+            else if ( SQL.getUserDetail("role", userID) == "manager")
             {
                 ManagerDashBoard managerDashboardpg = new ManagerDashBoard(userID);
                 managerDashboardpg.Show();
@@ -99,7 +99,22 @@ namespace GMS
 
         private void EditProfile_Load(object sender, EventArgs e)
         {
+            if (this.Owner != null)
+            {
+                this.Owner.Hide();
+            }
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void EditProfile_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.Owner != null) 
+            {                 this.Owner.Show();
+            }
         }
     }
 }

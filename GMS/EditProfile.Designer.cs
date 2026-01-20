@@ -286,6 +286,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(724, 325);
             this.panel1.TabIndex = 52;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label8
             // 
@@ -312,6 +313,7 @@
             this.Name = "EditProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditProfile";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditProfile_FormClosed);
             this.Load += new System.EventHandler(this.EditProfile_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

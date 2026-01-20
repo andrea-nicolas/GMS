@@ -50,7 +50,7 @@ namespace GMS
                 }
                 else if ( role == "admin")
                 {
-                    AdminDashboard admin = new AdminDashboard(userID);
+                    DashBoardOfAdmin admin = new DashBoardOfAdmin();
                     admin.Show();
                     this.Hide();
                 }

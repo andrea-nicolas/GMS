@@ -175,60 +175,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminActivityLog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminActivityLog.Designer.cs">
-      <DependentUpon>AdminActivityLog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminApprovals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminApprovals.Designer.cs">
-      <DependentUpon>AdminApprovals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminEmployeesCrud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminEmployeesCrud.Designer.cs">
-      <DependentUpon>AdminEmployeesCrud.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminItemsCrud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminItemsCrud.Designer.cs">
-      <DependentUpon>AdminItemsCrud.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminManagersCrud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminManagersCrud.Designer.cs">
-      <DependentUpon>AdminManagersCrud.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminSalespersonLogs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminSalespersonLogs.Designer.cs">
-      <DependentUpon>AdminSalespersonLogs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminSalesReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminSalesReport.Designer.cs">
-      <DependentUpon>AdminSalesReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUserList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminUserList.Designer.cs">
-      <DependentUpon>AdminUserList.cs</DependentUpon>
-    </Compile>
     <Compile Include="AssignSellsperson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +186,12 @@
     </Compile>
     <Compile Include="CrudDiscount.Designer.cs">
       <DependentUpon>CrudDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardOfAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoardOfAdmin.Designer.cs">
+      <DependentUpon>DashBoardOfAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="DbHelper.cs" />
     <Compile Include="EditProfile.cs">
@@ -377,6 +329,24 @@
       <DependentUpon>SPViewPendingCarts.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
+    <Compile Include="turnActive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="turnActive.Designer.cs">
+      <DependentUpon>turnActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewActivityLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewActivityLog.Designer.cs">
+      <DependentUpon>ViewActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSalesReport.Designer.cs">
+      <DependentUpon>ViewSalesReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewSellspersonSellslog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,38 +359,14 @@
     <Compile Include="ViewStockItemNotification.Designer.cs">
       <DependentUpon>ViewStockItemNotification.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminActivityLog.resx">
-      <DependentUpon>AdminActivityLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminApprovals.resx">
-      <DependentUpon>AdminApprovals.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminEmployeesCrud.resx">
-      <DependentUpon>AdminEmployeesCrud.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminItemsCrud.resx">
-      <DependentUpon>AdminItemsCrud.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminManagersCrud.resx">
-      <DependentUpon>AdminManagersCrud.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminSalespersonLogs.resx">
-      <DependentUpon>AdminSalespersonLogs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminSalesReport.resx">
-      <DependentUpon>AdminSalesReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUserList.resx">
-      <DependentUpon>AdminUserList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AssignSellsperson.resx">
       <DependentUpon>AssignSellsperson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrudDiscount.resx">
       <DependentUpon>CrudDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardOfAdmin.resx">
+      <DependentUpon>DashBoardOfAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
@@ -466,6 +412,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SPViewPendingCarts.resx">
       <DependentUpon>SPViewPendingCarts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="turnActive.resx">
+      <DependentUpon>turnActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewActivityLog.resx">
+      <DependentUpon>ViewActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSalesReport.resx">
+      <DependentUpon>ViewSalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewSellspersonSellslog.resx">
       <DependentUpon>ViewSellspersonSellslog.cs</DependentUpon>

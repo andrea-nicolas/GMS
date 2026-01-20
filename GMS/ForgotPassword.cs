@@ -78,7 +78,7 @@ namespace GMS
             }
             else if (SQL.getUserDetail("Role",userID) == "admin")
             {
-                AdminDashboard a = new AdminDashboard(userID);
+                DashBoardOfAdmin a = new DashBoardOfAdmin();
                 a.Show();
                 this.Hide();
             }
