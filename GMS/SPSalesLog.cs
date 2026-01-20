@@ -17,7 +17,7 @@ namespace GMS
         {
             InitializeComponent();
             userID = currentUser;
-            TBAssignedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
+            //TBAssignedCounter.Text = SQL.getUserDetail("assignedCounter", userID).ToString();
             TBLsaleslog.DataSource = SQL.getTableData("salesLogdb", " WHERE soldByUserID = " + userID.ToString());
             TBTotalSales.Text = SQL.getColumnSum("salesTotal", " salesLogdb ", " WHERE soldByUserID = " + userID.ToString()).ToString();
         }
