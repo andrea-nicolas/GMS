@@ -57,7 +57,7 @@
             this.BTCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTCancel.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTCancel.Location = new System.Drawing.Point(368, 270);
-            this.BTCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BTCancel.Name = "BTCancel";
             this.BTCancel.Size = new System.Drawing.Size(211, 32);
             this.BTCancel.TabIndex = 36;
@@ -71,7 +71,7 @@
             this.BTConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTConfirm.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTConfirm.Location = new System.Drawing.Point(149, 270);
-            this.BTConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.BTConfirm.Name = "BTConfirm";
             this.BTConfirm.Size = new System.Drawing.Size(211, 32);
             this.BTConfirm.TabIndex = 35;
@@ -98,7 +98,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(39, 24);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(724, 63);
             this.panel2.TabIndex = 51;
@@ -109,7 +109,7 @@
             this.TBEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBEmail.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBEmail.Location = new System.Drawing.Point(122, 126);
-            this.TBEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TBEmail.Name = "TBEmail";
             this.TBEmail.Size = new System.Drawing.Size(195, 22);
             this.TBEmail.TabIndex = 38;
@@ -120,7 +120,7 @@
             this.TBUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBUsername.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBUsername.Location = new System.Drawing.Point(122, 92);
-            this.TBUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBUsername.Margin = new System.Windows.Forms.Padding(4);
             this.TBUsername.Name = "TBUsername";
             this.TBUsername.Size = new System.Drawing.Size(195, 22);
             this.TBUsername.TabIndex = 37;
@@ -132,7 +132,7 @@
             this.TBPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBPhoneNo.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBPhoneNo.Location = new System.Drawing.Point(471, 89);
-            this.TBPhoneNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.TBPhoneNo.Name = "TBPhoneNo";
             this.TBPhoneNo.Size = new System.Drawing.Size(194, 22);
             this.TBPhoneNo.TabIndex = 41;
@@ -155,7 +155,7 @@
             this.RBFemale.BackColor = System.Drawing.Color.NavajoWhite;
             this.RBFemale.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBFemale.Location = new System.Drawing.Point(129, 159);
-            this.RBFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RBFemale.Margin = new System.Windows.Forms.Padding(4);
             this.RBFemale.Name = "RBFemale";
             this.RBFemale.Size = new System.Drawing.Size(67, 21);
             this.RBFemale.TabIndex = 44;
@@ -181,7 +181,7 @@
             this.RBMale.BackColor = System.Drawing.Color.NavajoWhite;
             this.RBMale.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBMale.Location = new System.Drawing.Point(228, 159);
-            this.RBMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RBMale.Margin = new System.Windows.Forms.Padding(4);
             this.RBMale.Name = "RBMale";
             this.RBMale.Size = new System.Drawing.Size(55, 21);
             this.RBMale.TabIndex = 45;
@@ -207,7 +207,7 @@
             this.TBRole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBRole.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBRole.Location = new System.Drawing.Point(471, 124);
-            this.TBRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBRole.Margin = new System.Windows.Forms.Padding(4);
             this.TBRole.Name = "TBRole";
             this.TBRole.ReadOnly = true;
             this.TBRole.Size = new System.Drawing.Size(194, 22);
@@ -255,7 +255,7 @@
             this.TBSecurityAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBSecurityAnswer.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBSecurityAnswer.Location = new System.Drawing.Point(471, 162);
-            this.TBSecurityAnswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBSecurityAnswer.Margin = new System.Windows.Forms.Padding(4);
             this.TBSecurityAnswer.Name = "TBSecurityAnswer";
             this.TBSecurityAnswer.ReadOnly = true;
             this.TBSecurityAnswer.Size = new System.Drawing.Size(194, 22);
@@ -282,7 +282,7 @@
             this.panel1.Controls.Add(this.TBUsername);
             this.panel1.Controls.Add(this.TBEmail);
             this.panel1.Location = new System.Drawing.Point(39, 95);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(724, 325);
             this.panel1.TabIndex = 52;
@@ -291,7 +291,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label8.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Ebrima", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(29, 22);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -308,7 +308,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditProfile";

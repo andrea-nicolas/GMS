@@ -195,7 +195,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ebrima", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(235, 22);
+            this.label4.Location = new System.Drawing.Point(234, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(250, 50);
             this.label4.TabIndex = 27;
