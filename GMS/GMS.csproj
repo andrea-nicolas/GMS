@@ -235,7 +235,6 @@
     <Compile Include="AssignSellsperson.Designer.cs">
       <DependentUpon>AssignSellsperson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="CrudDiscount.cs">
       <SubType>Form</SubType>
     </Compile>
